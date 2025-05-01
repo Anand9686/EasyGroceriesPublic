@@ -21,10 +21,10 @@ jobs:
         dotnet-version: 8.0.x
         
     - name: Restore dependencies
-      run: dotnet restore GroceryShopping.sln
+      run: dotnet restore src/GroceryShopping.sln
       
     - name: Build project
-      run: dotnet build WebApp/GroceryWebApp/GroceryWebApp.csproj
+      run: dotnet build src/WebApp/GroceryWebApp/GroceryWebApp.csproj
 
 
 

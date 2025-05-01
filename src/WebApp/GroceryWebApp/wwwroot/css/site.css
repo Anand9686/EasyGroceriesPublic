@@ -1,0 +1,269 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/* Bottom Nav Bar*/
+/* Place the navbar at the bottom of the page, and make it stick */
+.bnavbar {
+    background-color: antiquewhite;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    /* Style the links inside the navigation bar */
+    .bnavbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        /* Change the color of links on hover */
+        .bnavbar a:hover {
+            background-color: lightcyan;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .bnavbar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+.mobile-nav {
+    background: #F1F1F1;
+    position: fixed;
+    bottom: 0;
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.bloc-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .bloc-icon img {
+        width: 30px;
+    }
+@media screen and (min-width: 600px) {
+    .mobile-nav {
+        display: none;
+    }
+   
+        /*    #mobilesearch {
+        display: inline;
+    }*/
+    }
+@media screen and (max-width: 600px) {
+    #topmenu {
+        display: none;
+    }
+}
+
+    .wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: auto;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .inner1 {
+        float: left;
+        height: 30px;
+    }
+
+    .inner2 {
+        float: left;
+    }
+    /*.sub, .subsub {
+    display: none;
+}*
+    /* Menu */
+:root {
+    --primary-color: #344a72;
+    --secondary-color: chocolate;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+}
+
+#navbar ul {
+    list-style: none;
+}
+
+    #navbar ul li {
+        color: #333;
+        display: inline-block;
+        padding: 1rem;
+        position: relative;
+    }
+
+        #navbar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Hide Nested ul By Default */
+
+        #navbar ul li ul {
+            display: none;
+        }
+
+        #navbar ul li:hover {
+            cursor: pointer;
+            /*/ background: var(--primary-color);*/
+            font-weight:bold;
+            color: #fff;
+        }
+
+            #navbar ul li:hover a {
+                color: #fff;
+            }
+
+            /* Nested Dropdown Show */
+
+            #navbar ul li:hover ul {
+                display: block;
+                position: absolute;
+                left: 0;
+                width: 200px;
+                margin-top: 1rem;
+            }
+
+                #navbar ul li:hover ul li {
+                    display: block;
+                    background: white;
+                    border-radius:3%;
+                    line-height:5%;
+                }
+
+                    #navbar ul li:hover ul li a {
+                        color: #333;
+                    }
+
+                    #navbar ul li:hover ul li:hover {
+                        background-color: lightcyan; /*#e0e0e0; ;*/
+                        color: inherit;
+                    }
+
+                    #navbar ul li:hover ul li span {
+                        float: right;
+                        color: #fff;
+                        background-color: yellow; /*var(--primary-color);*/
+                        padding: 0.2rem 0.5rem;
+                        text-align: center;
+                        font-size: 0.8rem;
+                        border-radius: 5px;
+                    }
+
+                    #navbar ul li:hover ul li:hover span {
+                        background-color: maroon; /*var(--secondary-color);*/
+                    }
+
+        /*#navbar ul li:first-child {*/
+            /**//*background-color: var(--primary-color);
+        }*/
+
+            #navbar ul li:first-child a {
+                color: #fff;
+            }
+
+ul.sub {
+    z-index: 1000;
+}
+    /*End Menu */
+
+    /*Custom CSS*/
+body, nav, footer, html, card {
+    background-color: white;
+}
+.card {
+    border: 0px solid rgba(0,0,0,.125);
+}

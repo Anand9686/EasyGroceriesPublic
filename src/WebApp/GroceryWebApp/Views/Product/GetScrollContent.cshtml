@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model GroceryWebApp.Pages.Products.Model.ProductDetail
+@{
+    ViewData["Title"] = "GetScrollContent";
+}
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col">
+        <div class="card" style="width: 100%;">
+            <a asp-page="" asp-route-productId="@Model.Id"><img asp-append-version="true" class="card-img-top" src="~/images/Groceries/@Model.ImageName" alt="" style="height: 200px;"></a>
+            <div class="card-body" style="width: 100%;">
+                @*<h4 class="card-title"><a asp-page="/ProductDetail" asp-route-productId="@prod.Id" class="color-main">@prod.ProductSubDescription</a></h4>*@
+                <p class="card-text">@Model.ProductSubDescription</p>
+                <div class="row" style="width:100%">
+                    <div class="col">
+                        <p class="btn btn-danger btn-block" style="height: 32px; display: block !important; border-radius: 15px !important; font-family: &quot;Insider-Open Sans&quot;, sans-serif !important; font-size: 14px !important; background-color: rgb(22, 68, 164) !important; border-color: rgb(22, 68, 164) !important;">₹ @Model.CartCost</p>
+                    </div>
+                    @*  <form asp-page-handler="AddToCart" method="post" name="addToCartForm" id="add_cart_form">*@
+                    <a href="javascript:;" onclick='AddToCart("@Model.Id");return false;' class="btn btn-success btn-block" style="height: 32px; display: block !important; border-radius: 15px !important; font-family: &quot;Insider-Open Sans&quot;, sans-serif !important; font-size: 14px !important; background-color: #a2d605 !important; border-color: #a2d605 !important;">
+                        Add to Cart
+                    </a>
+
+                    
+                </div>
+                
+
+            </div>
+        </div>
+        </div>
+        <p class="card-text" style="width:50%">@Model.productdetailedInfo</p>
+        </div>
+
+     <script>
+        function AddToCart(item) {
+        $.ajax({
+            type: 'POST',
+            url: window.location.origin + "/BasketItem/CreateBasket",
+            data: "productDetailId=" + item,
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+            dataType: 'json',
+            success: function (data) {
+               // alert(data);
+                $('#CartCount').text(data);
+            },
+            error: function (xhr, status, error) {
+                alert("Error: " + error);
+            }
+        });
+    }
+    </script>
+        

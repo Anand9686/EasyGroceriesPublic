@@ -1,0 +1,42 @@
+﻿@page
+@model GroceryWebApp.Pages.Basket.UI.BookingHistoryModel
+@{
+}
+
+<div class="form-group">
+    <label  class="control-label">Order History</label>
+    <select id="OrderIds" name="OrderIds" asp-items="@Model.OrderIds" class="form-control">
+        <option value="-1">Select Order Id</option>
+    </select>
+</div>
+<div id="bookHistory" class="row" >
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#OrderIds").change(loadproducts);
+    });
+    function loadproducts() {
+        var orderid = $("#OrderIds").val();
+        if (orderid != "" && orderid != "-1") {
+            $.ajax({
+                type: 'Get',
+                url: window.location.origin + '/BasketItem/GetBookingHistory?orderid=' + orderid,
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                success: function (data) {
+                    if ($.trim(data) != '') {
+                        $('#bookHistory').empty();
+                        $('#bookHistory').append(data);
+                    }
+                    else {
+                        $('#bookHistory').empty();
+                    }
+                },
+                error: function (error) {
+                    alert("Error: " + error);
+                }
+            });
+        }
+    }
+</script>

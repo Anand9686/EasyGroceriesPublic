@@ -1,0 +1,115 @@
+﻿@page
+@model GroceryWebApp.Pages.Login.UI.LoginModel
+@{
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <label id="lblUserLogin" class="control-label"></label>
+        <form method="post" id="frmLoginUser">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div id="userLog">
+                <div class="form-group">
+                    <label asp-for="@Model.LoginUser.Mobile" class="control-label">Mobile</label>
+                    <input asp-for="@Model.LoginUser.Mobile" class="form-control" />
+                    <span asp-validation-for="@Model.LoginUser.Mobile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" id="btnLoginUser" class="btn btn-primary" />
+                </div>
+                </br>
+                <div class="form-group">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Login/UI/Register"> Sign Up</a>
+                </div>
+            </div>
+            <div id="mobileCodeVerify">
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+
+
+    $(document).ready(function () {
+
+        $("#btnLoginUser").on("click", function () {
+            var values = {};
+            $.each($("#frmLoginUser").serializeArray(), function (i, field) {
+                    values[field.name] = field.value;
+            })
+
+                        $.ajax({
+                            url: window.location.origin + "/UserLogin/VerifyUser?mobile=" + values["LoginUser.Mobile"],
+                            type: "GET",
+                            contentType: "application/json; charset=utf-8",
+                            datatype: JSON,
+                            success: function (result) {
+                                if (result != "1") {
+                                    $("#userLog").find("*").prop('readonly', true);
+                                    $("#btnLoginUser").prop('disabled', true);
+                                    $('#mobileCodeVerify').html(result);
+                                }
+                                else {
+                                    $('#mobileCodeVerify').html("Please verify Mobile number and try again");
+                                }
+                            },
+                            error: function (data) { alert("error"); }
+                        });
+
+            //$.ajax({
+            //    url: window.location.origin + "/UserLogin/GenerateToken?mobile=" + values["LoginUser.Mobile"],
+            //    type: "GET",
+            //    contentType: "application/json; charset=utf-8",
+            //    datatype: JSON,
+            //    success: function (result) {
+            //        if (document.referrer.toLowerCase().indexOf("login") > 1)
+            //            window.location.replace(window.location.origin + "/Products/UI/Products");
+            //        else
+            //            window.location.replace(document.referrer);
+            //    },
+            //    error: function (data) { alert("error"); }
+            //});
+
+
+            return false;
+        });
+
+    });
+
+   function VerifyCode()  {
+        var values = {};
+       $.each($("#frmLoginUser").serializeArray(), function (i, field) {
+             values[field.name] = field.value;
+        })
+
+        $.ajax({
+            url: window.location.origin + "/UserLogin/VerifySMS?mobile=" + values["LoginUser.Mobile"] + "&code=" + $("#codeVerify").val(),
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            datatype: JSON,
+            success: function (result) {
+                if (result == "approved") {
+                    $.ajax({
+                        url: window.location.origin + "/UserLogin/GenerateToken?mobile=" + values["LoginUser.Mobile"],
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        datatype: JSON,
+                        success: function (result) {
+                            if (document.referrer.toLowerCase().indexOf("login") > 1)
+                                window.location.replace(window.location.origin + "/Products/UI/Products");
+                            else
+                                window.location.replace(document.referrer);
+                        },
+                        error: function (data) { alert("error"); }
+                    });
+                }
+            },
+            error: function (data) { alert("error"); }
+        });
+
+        return false;
+    }
+
+</script>

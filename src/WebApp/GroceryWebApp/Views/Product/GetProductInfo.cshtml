@@ -1,0 +1,14 @@
+﻿
+@model GroceryWebApp.Pages.Products.Model.ProductDetail
+@{
+    ViewData["Title"] = "GetProductInfo";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+        @*<h4 class="card-title"><a asp-page="ProductDetail" asp-route-productId="@Model.Id" class="color-main">@Model.ProductSubDescription</a></h4>*@
+        <p class="card-text">@Model.ProductSubDescription</p>
+        </div>
+    </div>
+

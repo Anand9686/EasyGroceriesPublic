@@ -1,0 +1,529 @@
+﻿@page
+@model GroceryWebApp.Pages.Products.Model.ProductResponseModel
+@{
+}
+
+
+<h1>Create Product</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <label id="ProductCreaated" class="control-label"></label>
+        <form method="post" id="CreateProduct">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Product Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label">Product Description</label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Units" class="control-label">Units</label>
+                <input asp-for="Units" class="form-control" />
+                <span asp-validation-for="Units" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label">Price</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StockCount" class="control-label">Stock Count</label>
+                <input asp-for="StockCount" class="form-control" />
+                <span asp-validation-for="StockCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReorderLevel" class="control-label">Re-order Level</label>
+                <input asp-for="ReorderLevel" class="form-control" />
+                <span asp-validation-for="ReorderLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Discount" class="control-label">Discount</label>
+                <input asp-for="Discount" class="form-control" />
+                <span asp-validation-for="Discount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiscountValidDate" class="control-label">Discount Valid Till Date</label>
+                <input asp-for="DiscountValidDate" class="form-control" />
+                <span asp-validation-for="DiscountValidDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageName" class="control-label">Product Image Name</label>
+                <input asp-for="ImageName" class="form-control" />
+                <span asp-validation-for="ImageName" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Flag" checked /> @Html.DisplayNameFor(model => model.Flag)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" id="btnCreateProduct" class="btn btn-primary" />
+            </div>
+
+            <div class="form-group">
+                <table id="grid-table"></table>
+                <div id="grid-pager"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var returndata = {};
+      //  $('#CategoryCreaated').text('New Category to be  created Successfully');
+
+        //Dropdown list load categores for the product
+        $.ajax({
+            url: window.location.origin + "/CreateCategory/Index",
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            datatype: JSON,
+            success: function (result) {
+                $(result).each(function () {
+                    $("#Category").append($("<option></option>").val(this.value).html(this.text));
+                });
+            },
+            error: function (data) { }
+        });
+
+         //Create Category on button click
+        $("#btnCreateProduct").click(function () {
+            $("#CreateProduct").validate();
+            if ($("#CreateProduct").valid()) {
+                var data = $("#CreateProduct").serialize();
+                if ($('#Name').val() != '' && $('#Description').val() != '' && ($('#Price').val() != '' || $('#Price').val() <= 0)) {
+                    $.ajax({
+                        type: "POST",
+                        url: window.location.origin + "/Product/CreateNewProduct",
+                        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                        data: data,
+                        dataType: 'json',
+                        error: function (xhr, status, error) { },
+                        success: function (response) {
+                            // alert('New Category ' + response + ' created Successfully');
+                            $("#ProductCreaated").html('New Product ' + response + ' created Successfully');
+                            $('#Name').val("");
+                            $('#Description').val("");
+                            $('#Units').val("");
+                            $('#Price').val("");
+                            $('#Discount').val("");
+                            $('#StockCount').val("");
+                            $('#ReorderLevel').val("");
+                            $('#DiscountValidDate').val("");
+                            $('#ImageName').val("");
+                        }
+                    });
+                }
+            }
+            return false;
+        });
+        
+        //GetUnits();
+        //function GetUnits() {
+            $.ajax({
+                url: window.location.origin + "/Unit/GetUnits",
+                async: false,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                datatype: JSON,
+                success: function (result) {
+                    var data = '{ "-1": "Select Unit"';
+                    var char = ",";
+                    if (result.length > 0) {
+                        var i = 1;
+                        for (var key in result) {
+                            data = data + char + '"' + result[key].Id + '": "' + result[key].UnitName + ((i < result.length) ? '", ' : '" }');
+                            i = i + 1;
+                            char = "";
+                        }
+                     //   console.log($.parseJSON(data));
+                        returndata = $.parseJSON(data);
+                    }
+                },
+                error: function (data) { }
+            });
+
+       
+
+        function getAllUnits() {
+            
+            return returndata;
+        }
+
+        var grid_selector = "#grid-table";
+        var pager_selector = "#grid-pager";
+
+        //$("#Products").change(dropDonwControlsChange);
+        //$("#Category").change(dropDonwControlsChange);
+        //$("#Vendors").change(dropDonwControlsChange);
+
+
+        $(window).resize(function () {
+            $(grid_selector).jqGrid('setGridWidth', parseInt($(window).width()) - 400);
+        });
+
+        
+
+        $(grid_selector).jqGrid({
+            url: window.location.origin + "/Product/GetAllProducts",
+            mtype: "GET",
+            datatype: "json",
+            //height: 400,
+            colNames: ['Id', 'Product Name', 'Product Description', 'Units', 'Price',"Discount", "Stock Count", "Re-order Level",  'Flag', 'Discount Valid Date', 'Image Name', 'Unit'],
+            colModel: [
+                { name: "Id",width: 10, editable: true, hidden: true, editrules: { edithidden: false } },
+                //{ name: "ProdDetailID", index: "ProdDetailID", width: 10, editable: true, hidden: true, editrules: { edithidden: false } },
+                { name: "Name", index: "Name", width: 100, editable: true, editrules: { required: true } },
+                { name: "Description", index: "Description", width: 100, editable: true, editrules: { required: true } },
+                { name: "Units", index: "Units", width: 100, editable: true, editrules: { required: true } },                
+                { name: "Price", index: "Price", widt: 70, hidden:true, editable: true, },
+                
+                { name: "Discount", index: "Discount", width: 100, editable: true, editrules: { required: false, edithidden: true } },
+                { name: "StockCount", index: "StockCount", width: 70, editable: true, editrules: { required: true } },
+                { name: "ReorderLevel", index: "ReorderLevel", width: 100, editable: true,editrules: { required: true } },
+                { name: "Flag", index: "Flag", width: 100, editable: true, editrules: { required: true }, edittype: 'checkbox',editoptions: {value: "true:false"}},
+                {
+                    name: "DiscountValidDate", index: "DiscountValidDate", width: 120, editable: true,
+                    formatter: "date",
+                    formatoptions: { srcformat: "ISO8601Long", newformat: "m/d/Y h:i A" },
+                    editoptions: {
+                        size: 20,
+                        maxlengh: 20,
+                        dataInit: function (element) {
+                            $(element).datetimepicker({
+                                changeYear: true,
+                                changeMonth: true,
+                                dateFormat: 'yy-mm-dd',
+                                timeFormat: "'T'HH:mm:ss.SSS'Z's"
+                            })
+                        }
+                    }
+                },
+              
+               
+                { name: "ImageName", index: "ImageName", width: 100, editable: true, editrules: { required: true } },
+                { name: "Unit", index: "Unit", width: 100, editable: true, editrules: { required: true } }
+
+            ],
+            loadonce: true,
+            rowNum: 10,
+            rowList: [10, 20, 30],
+            pager: pager_selector,
+            altRows: true,
+            multiselect: true,
+            multiboxonly: true,
+            autowidth: true,
+            shrinkToFit: true,
+            sortname:'Id',
+           // caption: "Product Details",
+            loadComplete: function () {
+                var table = this;
+                setTimeout(function () {
+                    updatePagerIcons(table);
+                }, 0);
+            }
+        });
+
+        $(grid_selector).jqGrid('navGrid', pager_selector,
+            {
+                edit: true, edittitle: "Edit Details", width: '67%',
+                add: true, addtitle: "Add Details", width: '67%',
+                del: false,
+                search: true, addtitle: "Search Details", width: '100%',
+                refresh: true,
+                view: true, addtitle: "View Details", width: '100%',
+            },
+            //Edit Options. save key parameter will keybind the Enter key to submit.
+            {
+                editCaption: "Edit Product Details",
+                edittext: "Edit",
+                closeOnEscape: true,
+                closeAfterEdit: true,
+                savekey: [true, 25],
+                errorTextFormat: commonError,
+                width: "500",
+                reloadAfterSubmit: true,
+                bottominfo: "Fields marked with (*) are required",
+                top: "60",
+                left: "5",
+                right: "5",
+                //beforeShowForm: function (frm) {
+                //    $('#grid-table').jqGrid("editCell", 0, 0, false);
+                //    var myGrid = $('#grid-table'),
+                //        selectedRowId = myGrid.jqGrid('getGridParam', 'selrow'),
+                //        cellValue = myGrid.jqGrid('getCell', selectedRowId, 'UnitDetailId1');
+                //   // var rowData = myGrid.getRowData(selectedRowId);
+                //    if ($("#UnitId").val() != "-1") LoadUnitDetails($("#UnitId").val(), cellValue);
+                    
+                //    //if (cellValue !="")
+                //    //    $("#UnitDetailId").val(cellValue);
+                //},
+                onclickSubmit: function (response, postdata) {
+                    //call edit button
+                    EditPost(postdata);
+                },
+                OnClose: function () { return Close(); },
+            },
+            //add Options. save key parameter will keybind the Enter key to submit.
+            {
+                addCaption: "Add Product Details",
+                addtext: "Add",
+                closeOnEscape: true,
+                closeAfterEdit: true,
+                savekey: [true, 13],
+                errorTextFormat: commonError,
+                width: "500",
+                reloadAfterSubmit: true,
+                bottominfo: "Fields marked with (*) are required",
+                top: "60",
+                left: "5",
+                right: "5",
+                //beforeShowForm: function (frm) {
+                //    $("#UnitId").val("-1");
+                //    $("#UnitDetailId").html(""); // clear before appending new list
+                //    $("#UnitDetailId").append(
+                //        $('<option></option>').val("-1").html("Select Unit Size"));
+                //    $("#UnitDetailId").val("-1");
+                //},
+                onclickSubmit: function (response, postdata) {
+                    AddPost(postdata);
+                },
+                beforeSubmit: function (postdata, formid) { return ValidateForm(postdata); },
+                OnClose: function () { return Close(); },
+            },
+            //delete Options. save key parameter will keybind the Enter key to submit.
+            {
+                deleteCaption: "delete Product Details",
+                deletetext: "Delete Post",
+                closeOnEscape: true,
+                closeAfterEdit: true,
+                savekey: [true, 13],
+                errorTextFormat: commonError,
+                width: "500",
+                reloadAfterSubmit: true,
+                bottominfo: "Fields marked with (*) are required",
+                top: "60",
+                left: "5",
+                right: "5",
+                onclickSubmit: function (response, postdata) {
+                    DeletePost(postdata);
+                }
+            }
+
+
+        );
+
+        function commonError(data) {
+            return "Error Occured during Operation. Please try again";
+        }
+        function EditPost(params) {
+            //Here you need to define ajax call for update records to server
+            // params = { productId: selProduct, categoryId: selCategory, vendorId: selVendor, ...params }
+            //  console.log(params);
+            SaveProductDetails(params);
+        }
+        function AddPost(params) {
+            ////Here you need to define ajax call for insert records to server
+
+            SaveProductDetails(params);
+        }
+        function DeletePost(params) {
+            //Here you need to define ajax call for delete records to server
+            //params = { productId: selProduct, categoryId: selCategory, vendorId: selVendor, ...params }
+           // console.log(params);
+        }
+        function Close() {
+            GetProductDetails();
+            return true;
+        }
+        function ValidateForm(postdata) {
+            //var selProduct = $("#Products").val();
+            //var selCategory = $("#Category").val();
+            //var selVendor = $("#Vendors").val();
+
+            var error = "";
+            if (postdata.Name == "" || postdata.Description == "" || postdata.Units == "" || postdata.Price == ""
+                || postdata.Discount == "" || postdata.StockCount == "" || postdata.ReorderLevel == "" || postdata.ImageName == ""
+                || postdata.DiscountValidDate == "" || postdata.ImageName == "" || postdata.Unit == "") {
+                error = error + "Please enter values to all the mandatory fields </br>";
+            }
+            if (!$.isNumeric(postdata.Units) || postdata.Units <=0) {
+                error = error + "Please select a Units </br>";
+            }
+            if (!$.isNumeric(postdata.Discount) || postdata.Discount <= 0) {
+                error = error + "Please enter valid Discount for Cost to Company</br>";
+            }
+            if (!$.isNumeric(postdata.Price) || postdata.Price <= 0) {
+                error = error + "Please enter valid Price for Cost to Company </br>";
+            }
+            if (!$.isNumeric(postdata.StockCount) || postdata.StockCount <= 0) {
+                error = error + "Please enter valid Stock Count </br>";
+            }
+            if (!$.isNumeric(postdata.ReorderLevel) || postdata.ReorderLevel <= 0) {
+                error = error + "Please enter valid Re-order Level </br>";
+            }            
+            if (Date.parse(DiscountValidDate) <=0) {
+                error = error + "Please select a Discount Valid Date </br>";
+            }
+            //if (Date.parse(DiscountEffectiveStartDate) > Date.parse(DiscountEffectiveEndDate)) {
+            //    error = error + "Please select Discount Effective End Date greater than Discount Start End Date </br>";
+            //}
+
+            return [(error != "" ? false : true), error];
+        }
+
+        function updatePagerIcons(table) {
+            var replacement =
+            {
+                'ui-icon-seek-first': 'ace-icon fa fa-angle-double-left bigger-140',
+                'ui-icon-seek-prev': 'ace-icon fa fa-angle-left bigger-140',
+                'ui-icon-seek-next': 'ace-icon fa fa-angle-right bigger-140',
+                'ui-icon-seek-end': 'ace-icon fa fa-angle-double-right bigger-140'
+            };
+            $('.ui-pg-table:not(.navtable) > tbody > tr > .ui-pg-button > .ui-icon').each(function () {
+                var icon = $(this);
+                var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+
+                if ($class in replacement) icon.attr('class', 'ui-icon ' + replacement[$class]);
+            })
+        }
+
+         function LoadUnitDetails(unitId, selectedIndex) {
+           // alert(selectedIndex);
+            $.ajax({
+                url: window.location.origin + "/Unit/GetUnitDetail?unitId=" + unitId,
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                datatype: JSON,
+                success: function (result) {
+                    if (result.length > 0) {
+                       // alert(result.length);
+                        $("#UnitDetailId").html(""); // clear before appending new list
+                        $("#UnitDetailId").append(
+                            $('<option></option>').val("-1").html("Select Unit Size"));
+                        $.each(result, function (i, item) {
+                            $("#UnitDetailId").append(
+                                $('<option></option>').val(item.Id).html(item.UnitDescription));
+                        });
+                        $("#UnitDetailId").val(selectedIndex);
+                    }
+                    //else {
+
+                    //}
+                },
+                error: function (data) { }
+            });
+        }
+
+        function SaveProductDetails(params) {
+            //var selProduct = $("#Products").val();
+            //var selCategory = $("#Category").val();
+            //var selVendor = $("#Vendors").val();
+            //if (selProduct == -1 || selCategory == -1 || selVendor == -1) {
+            //    return false;
+            //}
+            var data = JSON.parse(JSON.stringify(params));
+           
+            data["Id"] = (data["Id"] == "") ? 0 : data["Id"];
+            data["Discount"] = (data["Discount"] == "") ? 0 : data["Discount"];
+            
+            $.each(data, function (key, value) {
+                //  converting date to UTC format;
+                if (key == "DiscountValidDate") {
+                    data[key] = new Date(value).toISOString();
+                }
+            });
+
+            params = { ProductDetail: [{ data }] };
+            if (!ValidateForm(params)) { return false;}
+          //  console.log(JSON.stringify(params));
+            $.ajax({
+                url: window.location.origin + "/Product/CreateProductDetails",
+                method: "POST",
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(params),
+                error: function (xhr, status, error) {
+                   // alert('error - ' + error);
+                },
+                success: function (response) {
+                    GetProductDetails();
+                }
+            });
+        }
+
+        function GetProductDetails() {
+           
+            
+            $.ajax({
+                url: window.location.origin + "/Product/GetAllProducts",
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                datatype: JSON,
+                success: function (result) {
+                    //if (result.length > 0) {
+
+                    var newdata = result;//You call Ajax peticion//
+
+                        //$("#grid-table").jqGrid('clearGridData')
+                        //    .jqGrid('setGridParam', { data: newdata, datatype: 'json' })
+                        //.trigger('reloadGrid');
+                    $("#grid-table").jqGrid('clearGridData');
+                    $("#grid-table").jqGrid('setGridParam', { data: newdata });
+                    $("#grid-table")[0].refreshIndex();
+                    $("#grid-table").trigger("reloadGrid");
+
+                    //}
+                    //else {
+
+                    //}
+                },
+                error: function (data) { }
+            });
+        }
+
+        $(grid_selector).jqGrid('setGridWidth', parseInt($(window).width()) - 400);
+    });
+
+    
+
+</script>
+
+<style>
+    .ui-widget,
+    .ui-jqgrid > .ui-jqgrid-view,
+    .ui-jqgrid-titlebar {
+        font-size: 0.9em !important;
+    }
+    #grid-pager_center {
+        float: left;
+    }
+    #searchmodfbox_grid-table {
+        min-width: 650px;
+    }
+
+    $viewmodgrid-table {
+        min-width: 500px;
+    }
+</style>
+
+<script src="~/js/jquery.jqgrid.min.js"></script>
+<script src="~/js/jquery-ui.min.js"></script>
+<script src="~/js/jquery.datetimepicker.full.min.js"></script>
+<link rel="stylesheet" href="~/css/ui.jqgrid.min.css">
+<link rel="stylesheet" href="~/css/jquery-ui.css">
+<link rel="stylesheet" href="~/css/jquery.datetimepicker.css">

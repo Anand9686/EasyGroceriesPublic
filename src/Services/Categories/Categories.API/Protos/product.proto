@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "Products.Grpc.Protos";
+
+service ProductProtoService {
+  rpc GetProductsCategory (GetProductsCategoryRequest) returns (ProductsCategoryResponse);
+}
+
+message GetProductsCategoryRequest {
+  int32 categoryid = 1;
+}
+
+message ProductsCategoryResponse {
+  repeated ProductsModel productsmodel = 1;
+}
+
+// The response message containing the Products Model.
+message ProductsModel {
+	string Name =1;
+	string Description =2;
+	string Units =3;
+	double Price =4;
+	double Discount =5;
+	int32 StockCount =6;
+	int32 ReorderLevel =7;
+	bool Flag =8;
+	string DiscountValidDate =9;
+	string ImageName =10;
+}

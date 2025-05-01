@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Products.Grpc.Protos";
+
+// The greeting service definition.
+service ProductProtoService {
+  rpc GetProduct (GetProductRequest) returns (ProductsModel);
+  rpc GetProductsCategory (GetProductsCategoryRequest) returns (ProductsCategoryResponse);
+  rpc GetProductDetail (GetProductDetailRequest) returns (ProductDetailsModel);
+  rpc UpdateProductQuantityForChecout (GetProdUpdQtyRequest) returns (ProdUpdQtyResponse);
+}
+
+// The request message containing the produtid.
+message GetProductRequest {
+  int32 productid = 1;
+}
+
+message GetProdUpdQtyRequest {
+  int32 productdetailid = 1;
+  int32 quantity = 2;
+  bool ischeckout = 3;
+}
+message GetProductsCategoryRequest {
+  int32 categoryid = 1;
+}
+
+message ProdUpdQtyResponse {
+  int32  response = 1;
+}
+message ProductsCategoryResponse {
+  repeated ProductsModel productsmodel = 1;
+}
+
+message GetProductDetailRequest {
+  int32 productdetailid = 1;
+}
+
+// The response message containing the Products Model.
+message ProductsModel {
+	string Name =1;
+	string Description =2;
+	string Unit =3;
+	int32 Category =4;
+	double Price =5;
+	double Discount =6;
+	int32 StockCount =7;
+	int32 ReorderLevel =8;
+	bool Flag =9;
+	string DiscountValidDate =10;
+	string ImageName =11;
+}
+
+
+message ProductDetailsModel {
+        int32 Id=1;
+	    int32 ProductId =2;
+        int32 CategoryId =3;
+        int32 VendorId =4;
+        int32 UnitId =5;
+        string ProductVendorCode =6;
+        string ProductVendorName =7;
+        double CartCost =8;
+        double CostToCompany =9;
+        int32 Quantity =10;
+        int32 AvailableQuantity =11;
+        int32 Discount =12;
+        string DiscountEffectiveStartDate =13;
+        string DiscountEffectiveEndDate =14;
+        string StockArivalDate =15;
+        string ImageName =16;
+        string UnitDetailId =17;
+        string ProductSubDescription =18;
+        string UnitDetailDesc =19;
+        string productdetailedInfo =20;
+}

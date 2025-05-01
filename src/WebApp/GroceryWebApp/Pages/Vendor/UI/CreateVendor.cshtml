@@ -1,0 +1,366 @@
+﻿@page
+@model GroceryWebApp.Pages.Vendor.Model.VendorResponseModel
+@{
+}
+
+
+<h1>Create Vendor</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <label id="VendorCreaated" class="control-label"></label>
+        <form asp-action="CreateVendor" id="CreateVendor">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Vendor Name</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label">Vendor Address</label>
+                <textarea asp-for="Address" class="form-control" cols="40" rows="5"></textarea>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">eMail</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mobile" class="control-label">Mobile</label>
+                <input asp-for="Mobile" class="form-control" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Flag" checked /> @Html.DisplayNameFor(model => model.Flag)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" id="btnCreateVendor" class="btn btn-primary" />
+            </div>
+            <div class="form-group">
+                <table id="grid-table"></table>
+                <div id="grid-pager"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var returndata = {};
+        //Create Vendor on button click
+        $("#btnCreateVendor").on("click", function () {
+            $("#CreateVendor").validate();
+            if ($("#CreateVendor").valid()) {
+                var data = $("#CreateVendor").serialize();
+                if ($('#Name').val() != '' && $('#Address').val() != '' && ($('#Email').val() != '' || $('#Mobile').val()!='')) {
+                  $.ajax({
+                    type: "POST",
+                      url: window.location.origin + "/Vendor/CreateNewVendor",
+                    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                    data: data,
+                    dataType: 'json',
+                    error: function (xhr, status, error) { },
+                      success: function (response) {
+                         // alert('New Vendor ' + response + ' created Successfully');
+                          $("#VendorCreaated").html('New Vendor ' + response + ' created Successfully');
+                          $('#Name').val("");
+                          $('#Address').val("");
+                          $('#Email').val("");
+                          $('#Mobile').val("");
+                      }
+                  });
+                }
+            }
+            return false;
+        });
+
+        var grid_selector = "#grid-table";
+        var pager_selector = "#grid-pager";
+
+        //$("#Products").change(dropDonwControlsChange);
+        //$("#Category").change(dropDonwControlsChange);
+        //$("#Vendors").change(dropDonwControlsChange);
+
+
+        $(window).resize(function () {
+            $(grid_selector).jqGrid('setGridWidth', parseInt($(window).width()) - 400);
+        });
+
+        $(grid_selector).jqGrid({
+            url: window.location.origin + "/Vendor/GetVendorDetail",
+            mtype: "GET",
+            datatype: "json",
+            //height: 400,
+            colNames: ['Id', 'Name', 'Address', 'Email','Mobile', 'Flag'],
+            colModel: [
+                { name: "Id",width: 10, editable: true, hidden: true, editrules: { edithidden: false } },
+                //{ name: "ProdDetailID", index: "ProdDetailID", width: 10, editable: true, hidden: true, editrules: { edithidden: false } },
+                { name: "Name", index: "Name", width: 100, editable: true, editrules: { required: true } },
+                { name: "Address", index: "Address", width: 100, editable: true, editrules: { required: true } },
+                { name: "Email", index: "Email", width: 100, editable: true, editrules: { required: true } },
+                
+                { name: "Mobile", index: "Mobile", widt: 100, hidden:true, editable: true, editrules: { required: true } },
+                
+                { name: "Flag", index: "Flag", width: 100, editable: true, editrules: { required: true }, edittype: 'checkbox',editoptions: {value: "true:false"}},
+                  ],
+            loadonce: true,
+            rowNum: 10,
+            rowList: [10, 20, 30],
+            pager: pager_selector,
+            altRows: true,
+            multiselect: true,
+            multiboxonly: true,
+            autowidth: true,
+            shrinkToFit: true,
+            sortname:'Id',
+           // caption: "Product Details",
+            loadComplete: function () {
+                var table = this;
+                setTimeout(function () {
+                    updatePagerIcons(table);
+                }, 0);
+            }
+        });
+
+        $(grid_selector).jqGrid('navGrid', pager_selector,
+            {
+                edit: true, edittitle: "Edit Details", width: '67%',
+                add: true, addtitle: "Add Details", width: '67%',
+                del: false,
+                search: true, addtitle: "Search Details", width: '100%',
+                refresh: true,
+                view: true, addtitle: "View Details", width: '100%',
+            },
+            //Edit Options. save key parameter will keybind the Enter key to submit.
+            {
+                editCaption: "Edit Vendor Details",
+                edittext: "Edit",
+                closeOnEscape: true,
+                closeAfterEdit: true,
+                savekey: [true, 25],
+                errorTextFormat: commonError,
+                width: "500",
+                reloadAfterSubmit: true,
+                bottominfo: "Fields marked with (*) are required",
+                top: "60",
+                left: "5",
+                right: "5",
+                beforeShowForm: function (frm) {
+                    $('#grid-table').jqGrid("editCell", 0, 0, false);
+                   // var myGrid = $('#grid-table'),
+                   //     selectedRowId = myGrid.jqGrid('getGridParam', 'selrow'),
+                   //     cellValue = myGrid.jqGrid('getCell', selectedRowId, 'UnitDetailId1');
+                   //// var rowData = myGrid.getRowData(selectedRowId);
+                   // if ($("#UnitId").val() != "-1") LoadUnitDetails($("#UnitId").val(), cellValue);
+                    
+                    //if (cellValue !="")
+                    //    $("#UnitDetailId").val(cellValue);
+                },
+                onclickSubmit: function (response, postdata) {
+                    //call edit button
+                    EditPost(postdata);
+                },
+                OnClose: function () { return Close(); },
+            },
+            //add Options. save key parameter will keybind the Enter key to submit.
+            {
+                addCaption: "Add Vendor Details",
+                addtext: "Add",
+                closeOnEscape: true,
+                closeAfterEdit: true,
+                savekey: [true, 13],
+                errorTextFormat: commonError,
+                width: "500",
+                reloadAfterSubmit: true,
+                bottominfo: "Fields marked with (*) are required",
+                top: "60",
+                left: "5",
+                right: "5",
+                beforeShowForm: function (frm) {
+                    //$("#UnitId").val("-1");
+                    //$("#UnitDetailId").html(""); // clear before appending new list
+                    //$("#UnitDetailId").append(
+                    //    $('<option></option>').val("-1").html("Select Unit Size"));
+                    //$("#UnitDetailId").val("-1");
+                },
+                onclickSubmit: function (response, postdata) {
+                    AddPost(postdata);
+                },
+                beforeSubmit: function (postdata, formid) { return ValidateForm(postdata); },
+                OnClose: function () { return Close(); },
+            },
+            //delete Options. save key parameter will keybind the Enter key to submit.
+            {
+                deleteCaption: "delete Vendor Details",
+                deletetext: "Delete Post",
+                closeOnEscape: true,
+                closeAfterEdit: true,
+                savekey: [true, 13],
+                errorTextFormat: commonError,
+                width: "500",
+                reloadAfterSubmit: true,
+                bottominfo: "Fields marked with (*) are required",
+                top: "60",
+                left: "5",
+                right: "5",
+                onclickSubmit: function (response, postdata) {
+                    DeletePost(postdata);
+                }
+            }
+
+
+        );
+
+        function commonError(data) {
+            return "Error Occured during Operation. Please try again";
+        }
+        function EditPost(params) {
+            //Here you need to define ajax call for update records to server
+            // params = { productId: selProduct, categoryId: selCategory, vendorId: selVendor, ...params }
+            //  console.log(params);
+            SaveVendorDetails(params);
+        }
+        function AddPost(params) {
+            ////Here you need to define ajax call for insert records to server
+
+            SaveVendorDetails(params);
+        }
+        function DeletePost(params) {
+            //Here you need to define ajax call for delete records to server
+            //params = { productId: selProduct, categoryId: selCategory, vendorId: selVendor, ...params }
+           // console.log(params);
+        }
+        function Close() {
+            GetVendorDetails();
+            return true;
+        }
+        function ValidateForm(postdata) {
+            
+
+            var error = "";
+            if (postdata.Name == "" || postdata.Address == "" 
+                || postdata.Email == "" || postdata.Mobile == "" ) {
+                error = error + "Please enter values to all the mandatory fields </br>";
+            }
+            
+
+            return [(error != "" ? false : true), error];
+        }
+
+        function updatePagerIcons(table) {
+            var replacement =
+            {
+                'ui-icon-seek-first': 'ace-icon fa fa-angle-double-left bigger-140',
+                'ui-icon-seek-prev': 'ace-icon fa fa-angle-left bigger-140',
+                'ui-icon-seek-next': 'ace-icon fa fa-angle-right bigger-140',
+                'ui-icon-seek-end': 'ace-icon fa fa-angle-double-right bigger-140'
+            };
+            $('.ui-pg-table:not(.navtable) > tbody > tr > .ui-pg-button > .ui-icon').each(function () {
+                var icon = $(this);
+                var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+
+                if ($class in replacement) icon.attr('class', 'ui-icon ' + replacement[$class]);
+            })
+        }
+
+        function SaveVendorDetails(params) {
+            
+            var data = JSON.parse(JSON.stringify(params));
+           
+            data["Id"] = (data["Id"] == "") ? 0 : data["Id"];
+            
+            
+           
+
+            params = { VendorDetail: [{ data }] };
+            if (!ValidateForm(params)) { return false;}
+          //  console.log(JSON.stringify(params));
+            $.ajax({
+                url: window.location.origin + "/Vendor/CreateVendorDetails",
+                method: "POST",
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(params),
+                error: function (xhr, status, error) {
+                   // alert('error - ' + error);
+                },
+                success: function (response) {
+                    GetVendorDetails();
+                }
+            });
+        }
+
+        function GetVendorDetails() {
+           // $("#grid-table").jqGrid('setGridParam', { datatype: 'json' }).trigger('reloadGrid');
+           // console.log("from function - " + returndata);
+
+            
+            // alert(response);
+            $.ajax({
+                url: window.location.origin + "/Vendor/GetVendorDetail",
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                datatype: JSON,
+                success: function (result) {
+                    //if (result.length > 0) {
+
+                    var newdata = result;//You call Ajax peticion//
+
+                        //$("#grid-table").jqGrid('clearGridData')
+                        //    .jqGrid('setGridParam', { data: newdata, datatype: 'json' })
+                        //.trigger('reloadGrid');
+                    $("#grid-table").jqGrid('clearGridData');
+                    $("#grid-table").jqGrid('setGridParam', { data: newdata });
+                    $("#grid-table")[0].refreshIndex();
+                    $("#grid-table").trigger("reloadGrid");
+
+                    //}
+                    //else {
+
+                    //}
+                },
+                error: function (data) { }
+            });
+        }
+
+        $(grid_selector).jqGrid('setGridWidth', parseInt($(window).width()) - 400);
+    });
+
+</script>
+
+<style>
+    .ui-widget,
+    .ui-jqgrid > .ui-jqgrid-view,
+    .ui-jqgrid-titlebar {
+        font-size: 0.9em !important;
+    }
+    #grid-pager_center {
+        float: left;
+    }
+    #searchmodfbox_grid-table {
+        min-width: 650px;
+    }
+
+    $viewmodgrid-table {
+        min-width: 500px;
+    }
+</style>
+
+<script src="~/js/jquery.jqgrid.min.js"></script>
+<script src="~/js/jquery-ui.min.js"></script>
+<script src="~/js/jquery.datetimepicker.full.min.js"></script>
+<link rel="stylesheet" href="~/css/ui.jqgrid.min.css">
+<link rel="stylesheet" href="~/css/jquery-ui.css">
+<link rel="stylesheet" href="~/css/jquery.datetimepicker.css">

@@ -1,0 +1,94 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<style>
+    .divTable {
+        display: table;
+        width: 100%;
+        text-align: center;
+    }
+
+    .divTableRow {
+        display: table-row;
+    }
+
+    .divTableHeading {
+        background-color: #ffffff;
+        display: table-header-group;
+    }
+
+    .divTableCell, .divTableHead {
+        border: 1px solid #ffffff;
+        display: table-cell;
+        padding: 3px 10px;
+    }
+
+    .divTableHeading {
+        background-color: #ffffff;
+        display: table-header-group;
+        font-weight: bold;
+    }
+
+    .divTableFoot {
+        background-color: #ffffff;
+        display: table-footer-group;
+        font-weight: bold;
+    }
+
+    .divTableBody {
+        display: table-row-group;
+    }
+    .divTableCell h6{
+        width:200px;
+    }
+    .left-align {
+        text-align: left;
+    }
+</style>
+<div class="row" style="width:100%;margin:4px">
+    <div class="col-md-12 order-md-2 mb-4">
+        @*<h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Your cart</span>
+                <span class="badge badge-secondary badge-pill">@Model.</span>
+            </h4>*@
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                @{double totalPrice = 0;}
+                <div class="divTable">
+                    <div class="divTableBody">
+                        <div class="divTableRow">
+                            <div class="divTableCell left-align">Product</div>
+                            <div class="divTableCell">Quantity</div>
+                            <div class="divTableCell">Discount</div>
+                            <div class="divTableCell">Price</div>
+                        </div>
+                        @foreach (var item in Model)
+                        {
+                            var itemHistory = (GroceryWebApp.Pages.Basket.Model.BookingHistoryList)item;
+                            @*
+                    <div>
+                        <h6 class="my-0">@itemHistory.ProductSubDescription</h6>
+                        <small class="text-muted">@itemHistory.Quantity</small>
+                        <small class="text-muted">@itemHistory.Discount</small>
+                    </div>
+                    <span class="text-muted">₹ @itemHistory.CartCost</span>
+                    @{ totalPrice = totalPrice + @itemHistory.CartCost; }
+                            *@
+                            totalPrice = totalPrice + @itemHistory.CartCost;
+                            <div class="divTableRow">
+                                <div class="divTableCell left-align"><h6 class="my-0">@itemHistory.ProductSubDescription</h6></div>
+                                <div class="divTableCell">@itemHistory.Quantity</div>
+                                <div class="divTableCell">@itemHistory.Discount</div>
+                                <div class="divTableCell">₹ @itemHistory.CartCost</div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+                <span>Total (USD)</span>
+                <strong style="margin-right:50px;">₹  @totalPrice </strong>
+            </li>
+        </ul>
+        </div>
+       </div>

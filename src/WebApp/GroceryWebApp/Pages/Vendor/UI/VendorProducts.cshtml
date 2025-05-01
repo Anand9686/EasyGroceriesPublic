@@ -1,0 +1,164 @@
+﻿@page
+@model GroceryWebApp.Pages.Vendor.UI.VendorProductsModel
+@{
+}
+@{
+    ViewData["Title"] = "Vendor Products page";
+}
+<link rel="stylesheet" href="~/css/jquery.multiselect.css" />
+<div class="row">
+    <div class="col-md-4">
+        <label id="VendorProductCreaated" class="control-label"></label>
+        <form method="post" id="VendorCreateProduct" asp-page-handler="">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Vendor Name</label>
+                <select id="VendorName" class="form-control" asp-items="@Model.Vendors">
+                    <option value="-1">Select Vendor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Category</label>
+                <select id="Category" class="form-control" asp-items="@Model.Categories">
+                    <option value="-1">Select Category</option>
+                </select>
+            </div>
+            <div class="form-group" >
+                <label class="control-label">Products</label>
+                <select id="Products" class="form-control 2col active" >
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" id="CreateVendorProductList" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script src="~/js/jquery.multiselect.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#CreateVendorProductList").click(function () {
+                var selectedProducts = $('#Products').val();
+                var selectedVendor = $('#VendorName').val();
+                var selectedCategory = $('#Category').val();
+
+                var data = "VendorId=" + selectedVendor + "&ProductId=" + selectedProducts + "&CategoryId=" + selectedCategory;
+                $.ajax({
+                    type: "POST",
+                    url: window.location.origin + "/Vendor/CreateVendorProducts",
+                    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                    data: data,
+                    dataType: 'json',
+                    error: function (xhr, status, error) { },
+                    success: function (response) {
+                        $('#Category').val(-1);
+                        $('#VendorName').val(-1);
+                        $('#Products').val(-1);
+                        $('#VendorProductCreaated').html('Vendor supply of Products created Successfully');
+                    }
+                });
+
+
+                return false;
+            });
+
+
+            $("#Category").change(function () {
+                var selVal = $(this).val();
+                //Products List Creation
+                $.ajax({
+                    url: window.location.origin + "/Product/GetProductsByCategory?categoryId=" + selVal,
+                    type: "GET",
+                    contentType: "application/json; charset=utf-8",
+                    datatype: JSON,
+                    success: function (result) {
+                        $('#Products option').remove();
+                        $('div.ms-options ul li').remove();
+                        if (result.length >0) {
+                            if (!$("#Products").attr('multiple')) {
+                                $('#Products').attr('multiple', 'multiple');
+                            }
+                            var i = 1;
+                            $(result).each(function () {
+                                $("#Products").append($("<option></option>").val(this.value).html(this.text));
+
+                                var li = $('<li/>')
+                                    .attr('data-search-term', this.text)
+                                    .appendTo($('div.ms-options ul'));
+                                var label = $('<label/>')
+                                    .attr('for', "ms-opt-" + i)
+                                    .text(this.text)
+                                    .appendTo(li);
+                                var checkbox = $('<input>')
+                                    .attr('type', "checkbox")
+                                    .attr('title', this.text)
+                                    .attr('id', "ms-opt-" + i)
+                                    .attr('value', this.value)
+                                    .text(this.text)
+                                    .appendTo(label);
+                                i = i + 1;
+
+                            });
+
+                            //Multi Select list with search option.                    //  ,
+                            //$(function () {
+                            //    $('#Products').multiselect({
+                            //        columns: 2,
+                            //       // search: true,
+                            //        placeholder: 'Select Products',
+                            //        //searchOptions: {
+                            //        //    'default': 'Search Products'
+                            //        //},
+                            //        selectAll: true
+                            //    });
+                            //});
+                            //Pull the list of Products selected for Vendor and Category
+                            var selectedVendor = $('#VendorName').val();
+                            var selectedCategory = $('#Category').val();
+                            var data = "VendorId=" + selectedVendor  + "&CategoryId=" + selectedCategory;
+                            $.ajax({
+                                type: "GET",
+                                url: window.location.origin + "/Vendor/GetVendorProductList?" + data,
+                                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                                dataType: 'json',
+                                error: function (xhr, status, error) {  },
+                                success: function (response) {
+                                    var length = response.length;
+                                    if (response.length > 0) {
+                                        //alert(1);
+                                        //$(response).each(function () {
+                                        //    $('input[value="' + this.productId + '"]').parent().parent().attr('class', 'selected');
+                                        //});
+                                        //alert(2);
+                                        var selectedValues="";
+                                        $(response).each(function () {
+                                            selectedValues = selectedValues + this.productId + ',';
+                                           // $('#Products').val(this.productId);
+                                        });
+                                        if (selectedValues.lastIndexOf(",")) {
+                                            selectedValues = selectedValues.substring(0 , selectedValues.length-1);
+                                        }
+                                        var dataarray = selectedValues.split(",");
+                                        if (dataarray.length > 0) {
+                                           // alert(dataarray);
+                                            $('#Products').val(dataarray);
+                                            $("#Products").multiselect("refresh");
+                                        }
+                                    }
+                                }
+                            });
+
+                        }
+                    },
+                    error: function (data) { }
+                });
+            });
+        });
+    </script>
+}

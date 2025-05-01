@@ -1,0 +1,138 @@
+﻿@page
+@model GroceryWebApp.Pages.Login.UI.RegisterModel
+@{
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <label id="UserCreaated" class="control-label"></label>
+        <form method="post" id="CreateUser">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div id="userReg">
+                <div class="form-group">
+                    <label asp-for="@Model.RegisterUser.Mobile" class="control-label">Mobile</label>
+                    <input asp-for="@Model.RegisterUser.Mobile" class="form-control" />
+                    <span asp-validation-for="@Model.RegisterUser.Mobile" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.RegisterUser.Name" class="control-label">Name</label>
+                    <input asp-for="@Model.RegisterUser.Name" class="form-control" />
+                    <span asp-validation-for="@Model.RegisterUser.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.RegisterUser.DOB" class="control-label">Date of Birth</label>
+                    <input asp-for="@Model.RegisterUser.DOB" class="form-control" type="date" />
+                    <span asp-validation-for="@Model.RegisterUser.DOB" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.RegisterUser.Email" class="control-label">Email</label>
+                    <input asp-for="@Model.RegisterUser.Email" class="form-control" />
+                    <span asp-validation-for="@Model.RegisterUser.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" id="btnCreateUser" class="btn btn-primary" />
+                </div>
+                <div class="form-group">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Login/UI/Login"> Sign In</a>
+                </div>
+            </div>
+            <div id="mobileCodeVerify">
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+
+
+    $(document).ready(function () {
+       // var values = {};
+       debugger;
+        $("#btnCreateUser").on("click", function () {
+           // var data = $("#CreateUser").serialize();
+         //   var tesgt = $("#CreateUser").serialize();
+            var values = {};
+            $.each($("#CreateUser").serializeArray(), function (i, field) {
+                if (field.DOB == "RegisterUser.DOB") {
+                    values[field.name] = new Date(field.value).toISOString()
+                }
+                else
+                    values[field.name] = field.value;
+            })
+
+
+                        $.ajax({
+                            url: window.location.origin + "/UserLogin/VerifyUser?mobile=" + values["RegisterUser.Mobile"],
+                            type: "GET",
+                            contentType: "application/json; charset=utf-8",
+                            datatype: JSON,
+                            success: function (result) {
+                                if (result != "1") {
+                                    //alert('completed');
+                                    $("#userReg").find("*").prop('readonly', true);
+                                    $("#btnCreateUser").prop('disabled', true);
+                                    $('#mobileCodeVerify').html(result);
+                                    //$('#userReg').attr('disabled', true);
+                                    //$("#userReg").children().prop('disabled', true);
+                                }
+                                else {
+                                    $('#mobileCodeVerify').html("Please Login from the SignIn screen");
+                                }
+                            },
+                            error: function (data) { alert("error"); }
+                        });
+
+            return false;
+        });
+
+    });
+
+   function VerifyCode()  {
+        var values = {};
+       $.each($("#CreateUser").serializeArray(), function (i, field) {
+           if (field.DOB == "RegisterUser.DOB") {
+               values[field.name] = new Date(field.value).toISOString()
+           }
+           else
+             values[field.name] = field.value;
+        })
+
+        $.ajax({
+            url: window.location.origin + "/UserLogin/VerifySMS?mobile=" + values["RegisterUser.Mobile"] + "&code=" + $("#codeVerify").val(),
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            datatype: JSON,
+            success: function (result) {
+                if (result == "approved") {
+                    //Create User
+                   
+                   // alert(result);
+                    var data = { Mobile: values["RegisterUser.Mobile"], Name: values["RegisterUser.Name"], Email: values["RegisterUser.Email"], DOB: values["RegisterUser.DOB"] };
+                    console.log(data);
+                    //data = { Mobile: values["RegisterUser.Mobile"], Name: values["RegisterUser.Name"], Email: values["RegisterUser.Email"], DOB: values["RegisterUser.DOB"]},
+                    $.ajax({
+                        type: "POST",
+                        url: window.location.origin + "/UserLogin/CreateUser",
+                        contentType: "application/json; charset=utf-8",
+                        datatype: JSON,
+                        data: JSON.stringify(data),
+                        error: function (xhr, status, error) { },
+                        success: function (response) {
+                            // alert('New Category ' + response + ' created Successfully');
+                           // alert('User Created');
+                            $('#mobileCodeVerify').html("User Enrolled Successfully. Please Login from the SignIn screen");
+                        }
+                    });
+
+                }
+              //  alert('result');
+            },
+            error: function (data) { alert("error"); }
+        });
+
+        return false;
+    }
+
+</script>

@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\Account\**" />
+    <Compile Remove="Pages\Account\**" />
+    <Content Remove="Controllers\Account\**" />
+    <Content Remove="Pages\Account\**" />
+    <EmbeddedResource Remove="Controllers\Account\**" />
+    <EmbeddedResource Remove="Pages\Account\**" />
+    <None Remove="Controllers\Account\**" />
+    <None Remove="Pages\Account\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\InfiniteScroll.cs" />
+    <Compile Remove="Pages\Products\UI\ProductDetail-bk.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Categories\UI\bk\CreateCategory.cshtml" />
+    <Content Remove="Pages\Categories\UI\bk\ListCategory.cshtml" />
+    <Content Remove="Pages\Products\UI\ProductDetail-bk.cshtml" />
+    <Content Remove="Views\Product\GetProductInfo.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="7.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="Serilog.Sinks.MySQL" Version="4.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\Common.Logging\Common.Logging.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\SMS.Authentication\External.Authentication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Categories\UI\bk\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+
+</Project>

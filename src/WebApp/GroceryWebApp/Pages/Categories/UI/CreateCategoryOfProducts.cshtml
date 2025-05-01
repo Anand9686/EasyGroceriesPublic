@@ -1,0 +1,90 @@
+﻿@page
+@model GroceryWebApp.Pages.Categories.UI.CreateCategoryOfProductsModel
+@{
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <label id="CategoryOfProductsCreated" class="control-label"></label>
+        <form method="post" id="CategoryOfProducts" asp-page-handler="">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Category Name</label>
+                <select id="Category" class="form-control" asp-items="@Model.Categories">
+                    <option value="-1">Select Category</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Products</label>
+                <select id="Products" class="form-control" asp-items="@Model.Products" multiple="multiple">
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" id="CreateCreategoryProductList" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+
+    @section Scripts{
+        <script>
+            $(document).ready(function () {
+
+                $("#CreateCreategoryProductList").click(function () {
+                    var selectedProducts = $('#Products').val();
+                    var selectedCategory = $('#Category').val();
+
+                    var data = "ProductId=" + selectedProducts + "&CategoryId=" + selectedCategory;
+                    $.ajax({
+                        type: "POST",
+                        url: window.location.origin + "/CreateCategory/CreateCategoryProducts",
+                        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                        data: data,
+                        dataType: 'json',
+                        error: function (xhr, status, error) { alert("error" + error); },
+                        success: function (response) {
+                            $('#Category').val(-1);
+                            $('#Products').val(-1);
+                          //  $("#Products").multiselect("refresh");
+
+                            $('#CategoryOfProductsCreated').html('Category of Products created Successfully');
+                        }
+                    });
+
+                    return false;
+                });
+
+
+                $("#Category").change(function () {
+                    var selVal = $(this).val();
+                    //Products List Creation
+                    $.ajax({
+                        url: window.location.origin + "/Product/GetProductsByCategory?categoryId=" + selVal,
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        datatype: JSON,
+                        success: function (result) {
+                            if (result.length > 0) {
+                                            var selectedValues = "";
+                                $(result).each(function () {
+                                    selectedValues = selectedValues + this.value + ',';
+                                });
+                                if (selectedValues.lastIndexOf(",")) {
+                                    selectedValues = selectedValues.substring(0, selectedValues.length - 1);
+                                }
+                                var dataarray = selectedValues.split(",");
+                                if (dataarray.length > 0) {
+                                  //  alert(dataarray);
+                                    $('#Products').val(dataarray);
+                                    $("#Products").multiselect("refresh");
+                                }
+                            }
+                        },
+                        error: function (data) { }
+                    });
+                });
+
+            });
+        </script>
+    }

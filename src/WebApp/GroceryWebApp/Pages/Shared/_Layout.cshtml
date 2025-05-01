@@ -1,0 +1,195 @@
+﻿@using Microsoft.AspNetCore.Http;
+@using System.Security.Claims;
+@inject IHttpContextAccessor HttpContextAccessor;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Grocery Shopping</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light mb-3" id="navbar">
+            <div class="container">
+                <a class="navbar-brand h5" asp-area="" asp-page="/Products/UI/Products"><img src="~/images/icons/Grocery-icon.png" />Grocery</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="divmenu">
+                    <ul class="navbar-nav flex-grow-3 top" >
+                        @*<li class="nav-item">
+                            <a class="nav-link text-dark h5" asp-area="" asp-page="/Products/UI/Products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark h5" asp-area="" asp-page="/Products/UI/Products">Categories</a>
+                        </li>*@
+                        <li class="nav-item">
+                            @*<a class="nav-link text-dark h5" asp-area="" asp-page="/Products/UI/Products">Orders</a>*@
+                            <a class="nav-link text-dark h5" asp-area="" asp-page="/Basket/UI/Cart">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark h5" asp-area="" >Account</a>
+                            <ul class="sub">
+                                @{var identity = HttpContextAccessor.HttpContext.User.Identity as ClaimsIdentity;
+                                    var claim = identity.Claims.FirstOrDefault(x => x.Type == "name");
+                                    if (HttpContextAccessor.HttpContext.User != null && claim == null)
+                                    {
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark" asp-area="" asp-page="/Login/UI/Login">Login</a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark" asp-area="" asp-page="/Login/UI/Logout">Logout</a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </li>
+                        @*@if (HttpContextAccessor.HttpContext.Session != null && HttpContextAccessor.HttpContext.Session.IsAvailable && HttpContextAccessor.HttpContext.Session.Keys.Contains("UserAdmin") && HttpContextAccessor.HttpContext.Session.GetInt32("UserAdmin") > 0)
+                        {*@
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark h5" asp-area="" >Admin</a>
+                                <ul class="sub">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark h5" asp-area="" asp-page="/Products/UI/AddProducts">Create Products</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark h5" asp-area="" asp-page="/Categories/UI/CreateCategory">Create Categories</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark h5" asp-area="" asp-page="/Vendor/UI/CreateVendor">Create Vendor</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark h5" asp-area="" asp-page="/Products/UI/ProductDetail">Product Detail</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        @*}*@
+                        @*<li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            </li>*@
+                        @*<li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Products/UI/AddProducts">Create Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Products/UI/Products">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Categories/UI/CreateCategory">Create Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Categories/UI/CreateCategoryOfProducts">Category of Products</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Vendor/UI/VendorProducts">Vendor Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Products/UI/ProductDetail">Product Detail</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login/UI/Register">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login/UI/Login">Login</a>
+                            </li>*@
+
+
+
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <span>
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <div class="input-group-append">
+                                    @*<button type="button" class="btn btn-secondary btn-number">
+                                            <i class="fa fa-search">Search</i>
+                                        </button>*@
+                                </div>
+                            </div>
+                        </span>
+                        <span>
+                            <a class="btn btn-success btn-sm ml-3" asp-page="/Basket/UI/Cart">
+                                <i class="fa fa-shopping-cart"></i> Cart
+                                <sup><span id="CartCount" class="badge badge-light"></span></sup>
+                            </a>
+                        </span>
+                    </form>
+                </div>
+
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <nav class="mobile-nav">
+            <a asp-page="/Products/UI/Products" class="bloc-icon">
+                <div class="wrapper">
+                    <div class="inner1">
+                        <img src="~/images/icons/home.svg" alt="">
+                    </div>
+                    <div class="inner2">Products</div>
+                </div>
+
+            </a>
+            <a class="bloc-icon" asp-page="/Products">
+                <div class="wrapper">
+                    <div class="inner1">
+                        <img src="~/images/icons/category.svg" alt="">
+                    </div>
+                    <div class="inner2">Category</div>
+                </div>
+            </a>
+            <a asp-page="/Orders" class="bloc-icon">
+                <div class="wrapper">
+                    <div class="inner1">
+                        <img src="~/images/icons/orders.svg" alt="">
+                    </div>
+                    <div class="inner2">Order</div>
+                </div>
+            </a>
+            <a asp-page="/Login/UI/Login" class="bloc-icon">
+                <div class="wrapper">
+                    <div class="inner1">
+                        <img src="~/images/icons/profile.svg" alt="">
+                    </div>
+                    <div class="inner2">Login</div>
+                </div>
+            </a>
+        </nav>
+    </footer>
+
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+@*<script>
+    $(document).ready(function () {
+        $("#topmenu").menu({ position: { at: "left bottom" } });
+    });
+</script>*@

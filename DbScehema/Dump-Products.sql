@@ -311,19 +311,19 @@ CREATE TABLE `productdetail` (
 
 LOCK TABLES `productdetail` WRITE;
 /*!40000 ALTER TABLE `productdetail` DISABLE KEYS */;
-INSERT INTO `productdetail` VALUES (40,1,1,1,2,4,'PVC001','PVN-1',25,20,20,20,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Test','1 KG',NULL),
-(41,1,1,1,1,1,'PVC0002','PVN-2',25,25,19,19,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Test','1 KG',NULL),
-(42,1,1,1,1,2,'PVC001','PVN-1',200,22,20,10,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Basamti Rice - 5KG','5KG',NULL),
-(43,1,1,1,1,1,'PVC001','PVN-1',50,45,25,24,0,'2190-07-02 14:31:00',NOW(),'2189-07-02 14:31:00','test.jpg',1,'self',NOW(),'self',NOW(),'Basamti Rice - 1KG','1 KG',NULL),
-(44,6,1,1,1,1,'PVC4','PVN 4',250,225,25,24,0,NOW(),NOW(),NOW(),'test.jpg',1,'self','0001-01-01 00:00:00','self',NOW(),'Test','1 KG',NULL),
-(45,5,1,1,1,1,'PVC7','PVN7',25,20,10,10,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),NULL,NULL,'Test','1 KG',NULL),
-(46,2,1,1,1,1,'PVC8','PVN8',25,25,10,10,0,'2190-07-03 13:24:00',NOW(),NOW(),'test.jpg',1,'self',NOW(),NULL,NULL,'Test','1 KG',NULL),
-(47,3,1,1,1,1,'PVC10','PVN10',20,20,20,20,0,'2190-07-03 14:02:00','2190-07-03 14:02:00','2189-07-03 14:02:00','test.jpg',1,'self',NOW(),NULL,NULL,'Test','1 KG',NULL),
-(48,4,1,1,1,1,'PVC11','PVN11',25,25,10,10,0,'2190-07-03 14:05:00','2190-07-03 14:05:00','2189-07-03 14:05:00','test.jpg',1,'self',NOW(),NULL,NULL,'Test','1 KG',NULL),
-(49,1,1,1,2,3,'PVC0101','PVN0101',80,75,25,25,1,'2197-07-02 19:34:00','2191-07-02 19:34:00','2189-07-02 19:34:00','test.jpg',1,'self',NOW(),'self',NOW(),'Test','1 KG',NULL),
-(50,1,1,1,1,2,'PVC2011','PVN2011',50,40,25,44,1,'2197-07-03 11:17:00','2197-07-03 11:17:00','2196-07-03 11:17:00','test.jpg',1,'self',NOW(),'self',NOW(),'Rava','5 KG',NULL),
-(51,1,1,1,1,2,'PVC0020','PVN0021',200,190,25,25,1,'2197-07-03 16:48:00','2197-07-03 16:48:00','2196-07-03 16:48:00','test.jpg',1,'self',NOW(),NULL,NULL,'Basamti Rice - 5 KG','5 KG',NULL),
-(52,1,1,1,1,2,'PVC333','PVN333',200,190,25,25,1,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),NULL,NULL,'Basamti Rice','5 KG',NULL);
+INSERT INTO `productdetail` VALUES (40,1,1,1,2,4,'PVC001','PVN-1',25,20,20,20,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Test','1 KG','test'),
+(41,1,1,1,1,1,'PVC0002','PVN-2',25,25,19,19,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Test','1 KG','test'),
+(42,1,1,1,1,2,'PVC001','PVN-1',200,22,20,10,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Basamti Rice - 5KG','5KG','test'),
+(43,1,1,1,1,1,'PVC001','PVN-1',50,45,25,24,0,'2190-07-02 14:31:00',NOW(),'2189-07-02 14:31:00','test.jpg',1,'self',NOW(),'self',NOW(),'Basamti Rice - 1KG','1 KG','test'),
+(44,6,1,1,1,1,'PVC4','PVN 4',250,225,25,24,0,NOW(),NOW(),NOW(),'test.jpg',1,'self','0001-01-01 00:00:00','self',NOW(),'Test','1 KG','test'),
+(45,5,1,1,1,1,'PVC7','PVN7',25,20,10,10,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),NULL,NULL,'Test','1 KG','test'),
+(46,2,1,1,1,1,'PVC8','PVN8',25,25,10,10,0,'2190-07-03 13:24:00',NOW(),NOW(),'test.jpg',1,'self',NOW(),NULL,NULL,'Test','1 KG','test'),
+(47,3,1,1,1,1,'PVC10','PVN10',20,20,20,20,0,'2190-07-03 14:02:00','2190-07-03 14:02:00','2189-07-03 14:02:00','test.jpg',1,'self',NOW(),NULL,NULL,'Test','1 KG','test'),
+(48,4,1,1,1,1,'PVC11','PVN11',25,25,10,10,0,'2190-07-03 14:05:00','2190-07-03 14:05:00','2189-07-03 14:05:00','test.jpg',1,'self',NOW(),NULL,NULL,'Test','1 KG','test'),
+(49,1,1,1,2,3,'PVC0101','PVN0101',80,75,25,25,1,'2197-07-02 19:34:00','2191-07-02 19:34:00','2189-07-02 19:34:00','test.jpg',1,'self',NOW(),'self',NOW(),'Test','1 KG','test'),
+(50,1,1,1,1,2,'PVC2011','PVN2011',50,40,25,44,1,'2197-07-03 11:17:00','2197-07-03 11:17:00','2196-07-03 11:17:00','test.jpg',1,'self',NOW(),'self',NOW(),'Rava','5 KG','test'),
+(51,1,1,1,1,2,'PVC0020','PVN0021',200,190,25,25,1,'2197-07-03 16:48:00','2197-07-03 16:48:00','2196-07-03 16:48:00','test.jpg',1,'self',NOW(),NULL,NULL,'Basamti Rice - 5 KG','5 KG','test'),
+(52,1,1,1,1,2,'PVC333','PVN333',200,190,25,25,1,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),NULL,NULL,'Basamti Rice','5 KG','test');
 /*!40000 ALTER TABLE `productdetail` ENABLE KEYS */;
 UNLOCK TABLES;
 

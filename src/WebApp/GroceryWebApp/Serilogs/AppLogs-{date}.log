@@ -53784,3 +53784,791 @@ System.ApplicationException: Something went wrong calling the API: Not Found
 2025-05-01 20:28:07.792 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 8.6219ms
 2025-05-01 20:28:07.842 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 61.7953ms
 2025-05-01 20:29:11.256 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-03 15:22:38.008 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-03 15:22:38.949 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-03 15:22:38.955 +05:30 [INF] Hosting environment: Development
+2025-05-03 15:22:38.955 +05:30 [INF] Content root path: D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp
+2025-05-03 15:22:38.999 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/ - -
+2025-05-03 15:22:39.707 +05:30 [INF] Executing endpoint '/Index'
+2025-05-03 15:22:39.830 +05:30 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-05-03 15:22:39.853 +05:30 [INF] Executing handler method GroceryWebApp.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-05-03 15:22:39.858 +05:30 [INF] Executed handler method OnGet, returned result .
+2025-05-03 15:22:39.867 +05:30 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-03 15:22:39.867 +05:30 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:22:40.198 +05:30 [INF] Executed page /Index in 354.4139ms
+2025-05-03 15:22:40.201 +05:30 [INF] Executed endpoint '/Index'
+2025-05-03 15:22:40.216 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Products/UI/Products - -
+2025-05-03 15:22:40.219 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/ - - - 302 - text/html;+charset=utf-8 1226.4567ms
+2025-05-03 15:22:40.242 +05:30 [INF] Executing endpoint '/Products/UI/Products'
+2025-05-03 15:22:40.264 +05:30 [INF] Route matched with {page = "/Products/UI/Products", action = "", controller = ""}. Executing page /Products/UI/Products
+2025-05-03 15:22:40.307 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Products.UI.ProductsModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:22:40.319 +05:30 [INF] Start processing HTTP request GET https://localhost:44371/Api/Products/GetProductDetails
+2025-05-03 15:22:40.326 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:22:40.327 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:22:40.367 +05:30 [INF] Sending HTTP request GET https://localhost:44371/Api/Products/GetProductDetails
+2025-05-03 15:22:41.396 +05:30 [INF] Received HTTP response headers after 1022.685ms - 200
+2025-05-03 15:22:41.402 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:22:41.402 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:22:41.404 +05:30 [INF] End processing HTTP request after 1091.232ms - 200
+2025-05-03 15:22:41.447 +05:30 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:22:41.503 +05:30 [INF] Executed page /Products/UI/Products in 1238.1067ms
+2025-05-03 15:22:41.504 +05:30 [INF] Executed endpoint '/Products/UI/Products'
+2025-05-03 15:22:41.510 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Products/UI/Products - - - 200 - text/html;+charset=utf-8 1293.9374ms
+2025-05-03 15:22:42.293 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:22:42.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 5.9008ms
+2025-05-03 15:22:42.330 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/carousel-ticker.css - -
+2025-05-03 15:22:42.339 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/carousel-ticker.css - - - 404 - - 9.4370ms
+2025-05-03 15:22:42.340 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/code_animate.css - -
+2025-05-03 15:22:42.341 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/code_animate.css - - - 404 - - 1.4334ms
+2025-05-03 15:22:42.346 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/bootsnav.css - -
+2025-05-03 15:22:42.347 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/bootsnav.css - - - 404 - - 1.3838ms
+2025-05-03 15:22:42.348 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/owl.carousel.min.css - -
+2025-05-03 15:22:42.349 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/owl.carousel.min.css - - - 404 - - 1.6886ms
+2025-05-03 15:22:42.356 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/nice-select.css - -
+2025-05-03 15:22:42.361 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/nice-select.css - - - 404 - - 4.2920ms
+2025-05-03 15:22:42.361 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/baguetteBox.min.css - -
+2025-05-03 15:22:42.376 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/baguetteBox.min.css - - - 404 - - 14.7500ms
+2025-05-03 15:22:42.400 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:22:42.458 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14
+2025-05-03 15:22:42.459 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:22:42.463 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 62.8832ms
+2025-05-03 15:22:42.495 +05:30 [INF] Route matched with {action = "GetScrollContent", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScrollContent(Int32, Int32) on controller GroceryWebApp.Controllers.Products.ProductController (GroceryWebApp).
+2025-05-03 15:22:42.518 +05:30 [INF] Start processing HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/1/10
+2025-05-03 15:22:42.518 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:22:42.519 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:22:42.519 +05:30 [INF] Sending HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/1/10
+2025-05-03 15:22:42.648 +05:30 [INF] Received HTTP response headers after 129.2502ms - 200
+2025-05-03 15:22:42.648 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:22:42.649 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:22:42.649 +05:30 [INF] End processing HTTP request after 130.5023ms - 200
+2025-05-03 15:22:42.653 +05:30 [INF] Products Pulled
+2025-05-03 15:22:42.661 +05:30 [INF] Executing PartialViewResult, running view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml.
+2025-05-03 15:22:42.762 +05:30 [INF] Executed PartialViewResult - view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml executed in 100.7574ms.
+2025-05-03 15:22:42.763 +05:30 [INF] Executed action GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp) in 267.5049ms
+2025-05-03 15:22:42.764 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:22:42.765 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14 - 200 - text/html;+charset=utf-8 307.2173ms
+2025-05-03 15:23:03.107 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44381/BasketItem/CreateBasket application/x-www-form-urlencoded;+charset=UTF-8 18
+2025-05-03 15:23:03.107 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Basket.BasketItemController.CreateBasket (GroceryWebApp)'
+2025-05-03 15:23:03.114 +05:30 [INF] Route matched with {action = "CreateBasket", controller = "BasketItem", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBasket(System.String) on controller GroceryWebApp.Controllers.Basket.BasketItemController (GroceryWebApp).
+2025-05-03 15:23:03.132 +05:30 [INF] Start processing HTTP request POST https://localhost:44398/Api/Basket
+2025-05-03 15:23:03.132 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket"
+2025-05-03 15:23:03.132 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket"
+2025-05-03 15:23:03.132 +05:30 [INF] Sending HTTP request POST https://localhost:44398/Api/Basket
+2025-05-03 15:23:04.879 +05:30 [INF] Received HTTP response headers after 1746.0577ms - 200
+2025-05-03 15:23:04.879 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket"
+2025-05-03 15:23:04.879 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket"
+2025-05-03 15:23:04.879 +05:30 [INF] End processing HTTP request after 1747.0501ms - 200
+2025-05-03 15:23:04.884 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2025-05-03 15:23:04.889 +05:30 [INF] Executed action GroceryWebApp.Controllers.Basket.BasketItemController.CreateBasket (GroceryWebApp) in 1774.8875ms
+2025-05-03 15:23:04.889 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Basket.BasketItemController.CreateBasket (GroceryWebApp)'
+2025-05-03 15:23:04.890 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44381/BasketItem/CreateBasket application/x-www-form-urlencoded;+charset=UTF-8 18 - 200 - application/json;+charset=utf-8 1782.9898ms
+2025-05-03 15:23:06.523 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Basket/UI/Cart - -
+2025-05-03 15:23:06.536 +05:30 [INF] Executing endpoint '/Basket/UI/Cart'
+2025-05-03 15:23:06.708 +05:30 [INF] Route matched with {page = "/Basket/UI/Cart", action = "", controller = ""}. Executing page /Basket/UI/Cart
+2025-05-03 15:23:06.710 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:23:06.714 +05:30 [INF] Start processing HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:23:06.714 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:23:06.714 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:23:06.714 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:23:11.320 +05:30 [INF] Received HTTP response headers after 4604.9103ms - 500
+2025-05-03 15:23:11.323 +05:30 [ERR] Retry 00:00:02 of AsyncRetryPolicy`1-d659157f at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:23:13.342 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:23:16.313 +05:30 [INF] Received HTTP response headers after 2969.187ms - 500
+2025-05-03 15:23:16.313 +05:30 [ERR] Retry 00:00:04 of AsyncRetryPolicy`1-d659157f at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:23:20.336 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:23:22.038 +05:30 [INF] Received HTTP response headers after 1702.0053ms - 500
+2025-05-03 15:23:22.039 +05:30 [ERR] Retry 00:00:08 of AsyncRetryPolicy`1-d659157f at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:23:30.046 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:23:30.232 +05:30 [INF] Received HTTP response headers after 184.7477ms - 500
+2025-05-03 15:23:30.232 +05:30 [ERR] Retry 00:00:16 of AsyncRetryPolicy`1-d659157f at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:23:36.652 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14
+2025-05-03 15:23:36.658 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:23:36.659 +05:30 [INF] Route matched with {action = "GetScrollContent", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScrollContent(Int32, Int32) on controller GroceryWebApp.Controllers.Products.ProductController (GroceryWebApp).
+2025-05-03 15:23:36.660 +05:30 [INF] Start processing HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/2/10
+2025-05-03 15:23:36.660 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/2/10"
+2025-05-03 15:23:36.660 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/2/10"
+2025-05-03 15:23:36.660 +05:30 [INF] Sending HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/2/10
+2025-05-03 15:23:36.691 +05:30 [INF] Received HTTP response headers after 30.571ms - 200
+2025-05-03 15:23:36.691 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/2/10"
+2025-05-03 15:23:36.692 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/2/10"
+2025-05-03 15:23:36.692 +05:30 [INF] End processing HTTP request after 32.0931ms - 200
+2025-05-03 15:23:36.695 +05:30 [INF] Products Pulled
+2025-05-03 15:23:36.695 +05:30 [INF] Executing PartialViewResult, running view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml.
+2025-05-03 15:23:36.696 +05:30 [INF] Executed PartialViewResult - view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml executed in 1.1976ms.
+2025-05-03 15:23:36.697 +05:30 [INF] Executed action GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp) in 37.9745ms
+2025-05-03 15:23:36.697 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:23:36.698 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14 - 200 - text/html;+charset=utf-8 46.0618ms
+2025-05-03 15:23:37.596 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14
+2025-05-03 15:23:37.599 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:23:37.600 +05:30 [INF] Route matched with {action = "GetScrollContent", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScrollContent(Int32, Int32) on controller GroceryWebApp.Controllers.Products.ProductController (GroceryWebApp).
+2025-05-03 15:23:37.603 +05:30 [INF] Start processing HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/3/10
+2025-05-03 15:23:37.603 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/3/10"
+2025-05-03 15:23:37.603 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/3/10"
+2025-05-03 15:23:37.604 +05:30 [INF] Sending HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/3/10
+2025-05-03 15:23:37.622 +05:30 [INF] Received HTTP response headers after 17.9888ms - 200
+2025-05-03 15:23:37.622 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/3/10"
+2025-05-03 15:23:37.622 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/3/10"
+2025-05-03 15:23:37.622 +05:30 [INF] End processing HTTP request after 19.5374ms - 200
+2025-05-03 15:23:37.624 +05:30 [INF] Products Pulled
+2025-05-03 15:23:37.624 +05:30 [INF] Executing PartialViewResult, running view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml.
+2025-05-03 15:23:37.625 +05:30 [INF] Executed PartialViewResult - view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml executed in 0.811ms.
+2025-05-03 15:23:37.626 +05:30 [INF] Executed action GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp) in 25.2192ms
+2025-05-03 15:23:37.626 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:23:37.627 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14 - 200 - text/html;+charset=utf-8 30.7404ms
+2025-05-03 15:23:46.265 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:23:48.184 +05:30 [INF] Received HTTP response headers after 1917.5799ms - 500
+2025-05-03 15:23:48.185 +05:30 [ERR] Retry 00:00:32 of AsyncRetryPolicy`1-d659157f at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:24:20.202 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:24:20.369 +05:30 [INF] Received HTTP response headers after 166.0406ms - 500
+2025-05-03 15:24:20.369 +05:30 [WRN] Received a non-success status code 500 from "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:24:20.370 +05:30 [WRN] Received a non-success status code 500 from "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:24:20.370 +05:30 [INF] End processing HTTP request after 73656.3589ms - 500
+2025-05-03 15:24:20.584 +05:30 [INF] Executed page /Basket/UI/Cart in 73876.0701ms
+2025-05-03 15:24:20.584 +05:30 [INF] Executed endpoint '/Basket/UI/Cart'
+2025-05-03 15:24:20.590 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Something went wrong when calling api.
+   at GroceryWebApp.Pages.Basket.Services.BasketService.GetBasket(String basketid) in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\Services\BasketService.cs:line 39
+   at GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync() in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\UI\Cart.cshtml.cs:line 33
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Convert[T](Object taskAsObject)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Execute(Object receiver, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeHandlerMethodAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeNextPageFilterAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Rethrow(PageHandlerExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-05-03 15:24:20.668 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Basket/UI/Cart - - - 500 - text/html;+charset=utf-8 74146.2634ms
+2025-05-03 15:24:20.723 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:24:20.724 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:24:20.731 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 7.4345ms
+2025-05-03 15:24:20.766 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.1979ms
+2025-05-03 15:28:51.123 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Basket/UI/Cart - -
+2025-05-03 15:28:51.132 +05:30 [INF] Executing endpoint '/Basket/UI/Cart'
+2025-05-03 15:28:51.132 +05:30 [INF] Route matched with {page = "/Basket/UI/Cart", action = "", controller = ""}. Executing page /Basket/UI/Cart
+2025-05-03 15:28:51.133 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:30:30.500 +05:30 [INF] Start processing HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:30:30.500 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:30:30.500 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:30:30.500 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:30:32.668 +05:30 [INF] Received HTTP response headers after 2167.9702ms - 500
+2025-05-03 15:30:32.668 +05:30 [ERR] Retry 00:00:02 of AsyncRetryPolicy`1-d659157f at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:30:34.905 +05:30 [INF] Executed page /Basket/UI/Cart in 103773.2303ms
+2025-05-03 15:30:34.906 +05:30 [INF] Executed endpoint '/Basket/UI/Cart'
+2025-05-03 15:30:34.907 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Polly.CircuitBreaker.BrokenCircuitException`1[System.Net.Http.HttpResponseMessage]: The circuit is now open and is not allowing calls.
+   at Polly.CircuitBreaker.CircuitStateController`1.OnActionPreExecute()
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendCoreAsync(HttpRequestMessage request, Context context, CancellationToken cancellationToken)
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Common.Logging.LoggingDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) in D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\LoggingDelegatingHandler.cs:line 25
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.SendAsyncCore(HttpRequestMessage request, HttpCompletionOption completionOption, Boolean async, Boolean emitTelemetryStartStop, CancellationToken cancellationToken)
+   at GroceryWebApp.Pages.Basket.Services.BasketService.GetBasket(String basketid) in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\Services\BasketService.cs:line 34
+   at GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync() in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\UI\Cart.cshtml.cs:line 33
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Convert[T](Object taskAsObject)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Execute(Object receiver, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeHandlerMethodAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeNextPageFilterAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Rethrow(PageHandlerExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-05-03 15:30:34.921 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Basket/UI/Cart - - - 500 - text/html;+charset=utf-8 103798.2094ms
+2025-05-03 15:30:34.941 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:30:34.941 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:30:34.947 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 6.1914ms
+2025-05-03 15:30:34.972 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.3546ms
+2025-05-03 15:34:40.876 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Basket/UI/Cart - -
+2025-05-03 15:34:40.885 +05:30 [INF] Executing endpoint '/Basket/UI/Cart'
+2025-05-03 15:34:40.885 +05:30 [INF] Route matched with {page = "/Basket/UI/Cart", action = "", controller = ""}. Executing page /Basket/UI/Cart
+2025-05-03 15:34:40.886 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:34:53.134 +05:30 [INF] Start processing HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:34:56.084 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:34:56.284 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:34:56.523 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:35:05.550 +05:30 [INF] Received HTTP response headers after 9026.6033ms - 500
+2025-05-03 15:35:05.550 +05:30 [ERR] Retry 00:00:02 of AsyncRetryPolicy`1-d659157f at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:35:07.777 +05:30 [INF] Executed page /Basket/UI/Cart in 26890.9123ms
+2025-05-03 15:35:07.777 +05:30 [INF] Executed endpoint '/Basket/UI/Cart'
+2025-05-03 15:35:07.778 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Polly.CircuitBreaker.BrokenCircuitException`1[System.Net.Http.HttpResponseMessage]: The circuit is now open and is not allowing calls.
+   at Polly.CircuitBreaker.CircuitStateController`1.OnActionPreExecute()
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendCoreAsync(HttpRequestMessage request, Context context, CancellationToken cancellationToken)
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Common.Logging.LoggingDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) in D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\LoggingDelegatingHandler.cs:line 25
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.SendAsyncCore(HttpRequestMessage request, HttpCompletionOption completionOption, Boolean async, Boolean emitTelemetryStartStop, CancellationToken cancellationToken)
+   at GroceryWebApp.Pages.Basket.Services.BasketService.GetBasket(String basketid) in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\Services\BasketService.cs:line 34
+   at GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync() in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\UI\Cart.cshtml.cs:line 33
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Convert[T](Object taskAsObject)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Execute(Object receiver, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeHandlerMethodAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeNextPageFilterAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Rethrow(PageHandlerExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-05-03 15:35:07.789 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Basket/UI/Cart - - - 500 - text/html;+charset=utf-8 26912.6755ms
+2025-05-03 15:35:07.825 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:35:07.829 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:35:07.836 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 11.1249ms
+2025-05-03 15:35:07.858 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.9728ms
+2025-05-03 15:35:28.061 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Basket/UI/Cart - -
+2025-05-03 15:35:28.066 +05:30 [INF] Executing endpoint '/Basket/UI/Cart'
+2025-05-03 15:35:28.066 +05:30 [INF] Route matched with {page = "/Basket/UI/Cart", action = "", controller = ""}. Executing page /Basket/UI/Cart
+2025-05-03 15:35:28.066 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:35:38.775 +05:30 [INF] Start processing HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:35:38.776 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:35:38.776 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:35:38.776 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:39:38.604 +05:30 [INF] Executed page /Basket/UI/Cart in 250538.2049ms
+2025-05-03 15:39:38.605 +05:30 [INF] Executed endpoint '/Basket/UI/Cart'
+2025-05-03 15:39:38.607 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendCoreAsync(HttpRequestMessage request, Context context, CancellationToken cancellationToken)
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendCoreAsync(HttpRequestMessage request, Context context, CancellationToken cancellationToken)
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Common.Logging.LoggingDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) in D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\LoggingDelegatingHandler.cs:line 25
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.SendAsyncCore(HttpRequestMessage request, HttpCompletionOption completionOption, Boolean async, Boolean emitTelemetryStartStop, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.SendAsyncCore(HttpRequestMessage request, HttpCompletionOption completionOption, Boolean async, Boolean emitTelemetryStartStop, CancellationToken cancellationToken)
+   at GroceryWebApp.Pages.Basket.Services.BasketService.GetBasket(String basketid) in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\Services\BasketService.cs:line 34
+   at GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync() in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\UI\Cart.cshtml.cs:line 33
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Convert[T](Object taskAsObject)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Execute(Object receiver, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeHandlerMethodAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeNextPageFilterAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Rethrow(PageHandlerExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-05-03 15:39:39.416 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Basket/UI/Cart - - - 500 - text/html;+charset=utf-8 251354.2386ms
+2025-05-03 15:39:39.471 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:39:44.470 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:39:44.511 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 40.7174ms
+2025-05-03 15:39:44.523 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 5051.8889ms
+2025-05-03 15:42:01.431 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-03 15:42:05.076 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-03 15:42:05.077 +05:30 [INF] Hosting environment: Development
+2025-05-03 15:42:05.077 +05:30 [INF] Content root path: D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp
+2025-05-03 15:42:05.194 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/ - -
+2025-05-03 15:42:20.610 +05:30 [INF] Executing endpoint '/Index'
+2025-05-03 15:42:20.821 +05:30 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-05-03 15:42:20.863 +05:30 [INF] Executing handler method GroceryWebApp.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-05-03 15:42:20.871 +05:30 [INF] Executed handler method OnGet, returned result .
+2025-05-03 15:42:20.884 +05:30 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-03 15:42:20.885 +05:30 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:42:21.454 +05:30 [INF] Executed page /Index in 614.5085ms
+2025-05-03 15:42:21.456 +05:30 [INF] Executed endpoint '/Index'
+2025-05-03 15:42:21.476 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Products/UI/Products - -
+2025-05-03 15:42:21.480 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/ - - - 302 - text/html;+charset=utf-8 16291.6693ms
+2025-05-03 15:42:21.510 +05:30 [INF] Executing endpoint '/Products/UI/Products'
+2025-05-03 15:42:21.530 +05:30 [INF] Route matched with {page = "/Products/UI/Products", action = "", controller = ""}. Executing page /Products/UI/Products
+2025-05-03 15:42:21.574 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Products.UI.ProductsModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:42:21.599 +05:30 [INF] Start processing HTTP request GET https://localhost:44371/Api/Products/GetProductDetails
+2025-05-03 15:42:21.607 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:42:21.608 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:42:21.663 +05:30 [INF] Sending HTTP request GET https://localhost:44371/Api/Products/GetProductDetails
+2025-05-03 15:42:22.998 +05:30 [INF] Received HTTP response headers after 1327.6023ms - 200
+2025-05-03 15:42:23.007 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:42:23.008 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:42:23.013 +05:30 [INF] End processing HTTP request after 1427.5107ms - 200
+2025-05-03 15:42:23.076 +05:30 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:42:23.158 +05:30 [INF] Executed page /Products/UI/Products in 1627.1492ms
+2025-05-03 15:42:23.159 +05:30 [INF] Executed endpoint '/Products/UI/Products'
+2025-05-03 15:42:23.186 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Products/UI/Products - - - 200 - text/html;+charset=utf-8 1709.7467ms
+2025-05-03 15:42:24.860 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:42:24.875 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 11.8259ms
+2025-05-03 15:42:24.916 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/carousel-ticker.css - -
+2025-05-03 15:42:24.936 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/code_animate.css - -
+2025-05-03 15:42:24.938 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/carousel-ticker.css - - - 404 - - 21.7575ms
+2025-05-03 15:42:24.941 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/code_animate.css - - - 404 - - 5.0322ms
+2025-05-03 15:42:24.947 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/bootsnav.css - -
+2025-05-03 15:42:24.948 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/owl.carousel.min.css - -
+2025-05-03 15:42:24.948 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/bootsnav.css - - - 404 - - 1.5192ms
+2025-05-03 15:42:24.952 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/owl.carousel.min.css - - - 404 - - 3.3114ms
+2025-05-03 15:42:24.963 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/nice-select.css - -
+2025-05-03 15:42:24.965 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/nice-select.css - - - 404 - - 1.8019ms
+2025-05-03 15:42:24.970 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/baguetteBox.min.css - -
+2025-05-03 15:42:24.973 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/baguetteBox.min.css - - - 404 - - 1.6886ms
+2025-05-03 15:42:25.015 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:42:25.148 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 133.7805ms
+2025-05-03 15:42:25.205 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14
+2025-05-03 15:42:25.207 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:42:25.246 +05:30 [INF] Route matched with {action = "GetScrollContent", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScrollContent(Int32, Int32) on controller GroceryWebApp.Controllers.Products.ProductController (GroceryWebApp).
+2025-05-03 15:42:25.282 +05:30 [INF] Start processing HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/1/10
+2025-05-03 15:42:25.282 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:42:25.283 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:42:25.283 +05:30 [INF] Sending HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/1/10
+2025-05-03 15:42:25.512 +05:30 [INF] Received HTTP response headers after 228.5354ms - 200
+2025-05-03 15:42:25.512 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:42:25.512 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:42:25.512 +05:30 [INF] End processing HTTP request after 230.3411ms - 200
+2025-05-03 15:42:25.532 +05:30 [INF] Products Pulled
+2025-05-03 15:42:25.550 +05:30 [INF] Executing PartialViewResult, running view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml.
+2025-05-03 15:42:25.704 +05:30 [INF] Executed PartialViewResult - view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml executed in 157.1306ms.
+2025-05-03 15:42:25.705 +05:30 [INF] Executed action GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp) in 458.8832ms
+2025-05-03 15:42:25.706 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:42:25.706 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14 - 200 - text/html;+charset=utf-8 500.9528ms
+2025-05-03 15:42:49.230 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44381/BasketItem/CreateBasket application/x-www-form-urlencoded;+charset=UTF-8 18
+2025-05-03 15:42:49.231 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Basket.BasketItemController.CreateBasket (GroceryWebApp)'
+2025-05-03 15:42:49.247 +05:30 [INF] Route matched with {action = "CreateBasket", controller = "BasketItem", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBasket(System.String) on controller GroceryWebApp.Controllers.Basket.BasketItemController (GroceryWebApp).
+2025-05-03 15:42:49.325 +05:30 [INF] Start processing HTTP request POST https://localhost:44398/Api/Basket
+2025-05-03 15:42:49.325 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket"
+2025-05-03 15:42:49.325 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket"
+2025-05-03 15:42:49.326 +05:30 [INF] Sending HTTP request POST https://localhost:44398/Api/Basket
+2025-05-03 15:42:56.004 +05:30 [INF] Received HTTP response headers after 6678.296ms - 200
+2025-05-03 15:42:56.004 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket"
+2025-05-03 15:42:56.004 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket"
+2025-05-03 15:42:56.005 +05:30 [INF] End processing HTTP request after 6679.7466ms - 200
+2025-05-03 15:42:56.016 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2025-05-03 15:42:56.027 +05:30 [INF] Executed action GroceryWebApp.Controllers.Basket.BasketItemController.CreateBasket (GroceryWebApp) in 6780.5053ms
+2025-05-03 15:42:56.027 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Basket.BasketItemController.CreateBasket (GroceryWebApp)'
+2025-05-03 15:42:56.031 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44381/BasketItem/CreateBasket application/x-www-form-urlencoded;+charset=UTF-8 18 - 200 - application/json;+charset=utf-8 6798.2307ms
+2025-05-03 15:43:01.040 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Basket/UI/Cart - -
+2025-05-03 15:43:01.115 +05:30 [INF] Executing endpoint '/Basket/UI/Cart'
+2025-05-03 15:43:01.603 +05:30 [INF] Route matched with {page = "/Basket/UI/Cart", action = "", controller = ""}. Executing page /Basket/UI/Cart
+2025-05-03 15:43:01.604 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:43:04.464 +05:30 [INF] Start processing HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:43:04.464 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:43:04.465 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:43:04.465 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:43:19.415 +05:30 [INF] Received HTTP response headers after 14950.0098ms - 500
+2025-05-03 15:43:19.419 +05:30 [ERR] Retry 00:00:02 of AsyncRetryPolicy`1-3be65375 at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:43:21.478 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:43:29.631 +05:30 [INF] Received HTTP response headers after 8148.5478ms - 500
+2025-05-03 15:43:29.631 +05:30 [ERR] Retry 00:00:04 of AsyncRetryPolicy`1-3be65375 at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:43:33.664 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:43:37.738 +05:30 [INF] Received HTTP response headers after 4074.0647ms - 500
+2025-05-03 15:43:37.738 +05:30 [ERR] Retry 00:00:08 of AsyncRetryPolicy`1-3be65375 at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:43:45.782 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:43:49.657 +05:30 [INF] Received HTTP response headers after 3874.4642ms - 500
+2025-05-03 15:43:49.658 +05:30 [ERR] Retry 00:00:16 of AsyncRetryPolicy`1-3be65375 at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:44:05.705 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:44:09.170 +05:30 [INF] Received HTTP response headers after 3464.9026ms - 500
+2025-05-03 15:44:09.172 +05:30 [ERR] Retry 00:00:32 of AsyncRetryPolicy`1-3be65375 at , due to: Polly.DelegateResult`1[System.Net.Http.HttpResponseMessage].
+2025-05-03 15:44:41.207 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:47:35.275 +05:30 [INF] Executed page /Basket/UI/Cart in 273672.457ms
+2025-05-03 15:47:35.277 +05:30 [INF] Executed endpoint '/Basket/UI/Cart'
+2025-05-03 15:47:35.295 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendCoreAsync(HttpRequestMessage request, Context context, CancellationToken cancellationToken)
+   at Polly.CircuitBreaker.AsyncCircuitBreakerEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext, ExceptionPredicates shouldHandleExceptionPredicates, ResultPredicates`1 shouldHandleResultPredicates, ICircuitController`1 breakerController)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendCoreAsync(HttpRequestMessage request, Context context, CancellationToken cancellationToken)
+   at Polly.Retry.AsyncRetryEngine.ImplementationAsync[TResult](Func`3 action, Context context, CancellationToken cancellationToken, ExceptionPredicates shouldRetryExceptionPredicates, ResultPredicates`1 shouldRetryResultPredicates, Func`5 onRetryAsync, Int32 permittedRetryCount, IEnumerable`1 sleepDurationsEnumerable, Func`4 sleepDurationProvider, Boolean continueOnCapturedContext)
+   at Polly.AsyncPolicy`1.ExecuteAsync(Func`3 action, Context context, CancellationToken cancellationToken, Boolean continueOnCapturedContext)
+   at Microsoft.Extensions.Http.PolicyHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Common.Logging.LoggingDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) in D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\LoggingDelegatingHandler.cs:line 25
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendAsync>g__Core|5_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.SendAsyncCore(HttpRequestMessage request, HttpCompletionOption completionOption, Boolean async, Boolean emitTelemetryStartStop, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.SendAsyncCore(HttpRequestMessage request, HttpCompletionOption completionOption, Boolean async, Boolean emitTelemetryStartStop, CancellationToken cancellationToken)
+   at GroceryWebApp.Pages.Basket.Services.BasketService.GetBasket(String basketid) in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\Services\BasketService.cs:line 34
+   at GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync() in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Pages\Basket\UI\Cart.cshtml.cs:line 33
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Convert[T](Object taskAsObject)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory.GenericTaskHandlerMethod.Execute(Object receiver, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeHandlerMethodAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeNextPageFilterAsync()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Rethrow(PageHandlerExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-05-03 15:47:38.365 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Basket/UI/Cart - - - 500 - text/html;+charset=utf-8 277324.5559ms
+2025-05-03 15:47:39.083 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:47:39.083 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:47:39.098 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 15.0627ms
+2025-05-03 15:47:39.152 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 69.5054ms
+2025-05-03 15:47:55.277 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Basket/UI/Cart - -
+2025-05-03 15:47:55.299 +05:30 [INF] Executing endpoint '/Basket/UI/Cart'
+2025-05-03 15:47:55.299 +05:30 [INF] Route matched with {page = "/Basket/UI/Cart", action = "", controller = ""}. Executing page /Basket/UI/Cart
+2025-05-03 15:47:55.300 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:47:56.410 +05:30 [INF] Start processing HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:47:56.410 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:47:56.410 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:47:56.410 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:48:01.437 +05:30 [INF] Received HTTP response headers after 5025.9572ms - 200
+2025-05-03 15:48:01.437 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:48:01.437 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:48:01.437 +05:30 [INF] End processing HTTP request after 5027.1566ms - 200
+2025-05-03 15:48:01.452 +05:30 [INF] Start processing HTTP request GET https://localhost:44303/Api/Unit/GetUnitDetail/1
+2025-05-03 15:48:01.452 +05:30 [INF] Sending request to "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:48:01.452 +05:30 [INF] Sending request to "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:48:01.452 +05:30 [INF] Sending HTTP request GET https://localhost:44303/Api/Unit/GetUnitDetail/1
+2025-05-03 15:48:03.076 +05:30 [INF] Received HTTP response headers after 1623.3771ms - 200
+2025-05-03 15:48:03.077 +05:30 [INF] Received a success response from "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:48:03.077 +05:30 [INF] Received a success response from "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:48:03.077 +05:30 [INF] End processing HTTP request after 1625.1255ms - 200
+2025-05-03 15:48:03.086 +05:30 [INF] Start processing HTTP request GET https://localhost:44303/Api/Unit/GetUnitDetail/2
+2025-05-03 15:48:03.086 +05:30 [INF] Sending request to "https://localhost:44303/Api/Unit/GetUnitDetail/2"
+2025-05-03 15:48:03.087 +05:30 [INF] Sending request to "https://localhost:44303/Api/Unit/GetUnitDetail/2"
+2025-05-03 15:48:03.087 +05:30 [INF] Sending HTTP request GET https://localhost:44303/Api/Unit/GetUnitDetail/2
+2025-05-03 15:48:03.224 +05:30 [INF] Received HTTP response headers after 136.5364ms - 200
+2025-05-03 15:48:03.224 +05:30 [INF] Received a success response from "https://localhost:44303/Api/Unit/GetUnitDetail/2"
+2025-05-03 15:48:03.226 +05:30 [INF] Received a success response from "https://localhost:44303/Api/Unit/GetUnitDetail/2"
+2025-05-03 15:48:03.226 +05:30 [INF] End processing HTTP request after 139.699ms - 200
+2025-05-03 15:48:03.231 +05:30 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:48:03.567 +05:30 [INF] Executed page /Basket/UI/Cart in 8267.5457ms
+2025-05-03 15:48:03.567 +05:30 [INF] Executed endpoint '/Basket/UI/Cart'
+2025-05-03 15:48:03.775 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Basket/UI/Cart - - - 200 - text/html;+charset=utf-8 8497.6867ms
+2025-05-03 15:48:03.866 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:48:03.960 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:48:03.979 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 113.5658ms
+2025-05-03 15:48:04.180 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 220.2599ms
+2025-05-03 15:51:39.454 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-03 15:51:41.821 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-03 15:51:41.875 +05:30 [INF] Hosting environment: Development
+2025-05-03 15:51:41.875 +05:30 [INF] Content root path: D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp
+2025-05-03 15:51:41.945 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/ - -
+2025-05-03 15:51:42.932 +05:30 [INF] Executing endpoint '/Index'
+2025-05-03 15:51:43.092 +05:30 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-05-03 15:51:43.119 +05:30 [INF] Executing handler method GroceryWebApp.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-05-03 15:51:43.125 +05:30 [INF] Executed handler method OnGet, returned result .
+2025-05-03 15:51:43.130 +05:30 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-03 15:51:43.131 +05:30 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:51:43.538 +05:30 [INF] Executed page /Index in 437.5635ms
+2025-05-03 15:51:43.540 +05:30 [INF] Executed endpoint '/Index'
+2025-05-03 15:51:43.562 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/ - - - 302 - text/html;+charset=utf-8 1621.1760ms
+2025-05-03 15:51:43.609 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Products/UI/Products - -
+2025-05-03 15:51:43.637 +05:30 [INF] Executing endpoint '/Products/UI/Products'
+2025-05-03 15:51:43.675 +05:30 [INF] Route matched with {page = "/Products/UI/Products", action = "", controller = ""}. Executing page /Products/UI/Products
+2025-05-03 15:51:43.736 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Products.UI.ProductsModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:51:43.762 +05:30 [INF] Start processing HTTP request GET https://localhost:44371/Api/Products/GetProductDetails
+2025-05-03 15:51:43.775 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:51:43.776 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:51:43.822 +05:30 [INF] Sending HTTP request GET https://localhost:44371/Api/Products/GetProductDetails
+2025-05-03 15:51:45.443 +05:30 [INF] Received HTTP response headers after 1612.514ms - 200
+2025-05-03 15:51:45.450 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:51:45.450 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetProductDetails"
+2025-05-03 15:51:45.452 +05:30 [INF] End processing HTTP request after 1703.9361ms - 200
+2025-05-03 15:51:45.502 +05:30 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:51:45.592 +05:30 [INF] Executed page /Products/UI/Products in 1910.8237ms
+2025-05-03 15:51:45.601 +05:30 [INF] Executed endpoint '/Products/UI/Products'
+2025-05-03 15:51:45.613 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Products/UI/Products - - - 200 - text/html;+charset=utf-8 2004.2612ms
+2025-05-03 15:51:48.263 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:51:48.276 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 7.8724ms
+2025-05-03 15:51:48.407 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/carousel-ticker.css - -
+2025-05-03 15:51:48.415 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/code_animate.css - -
+2025-05-03 15:51:48.421 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/carousel-ticker.css - - - 404 - - 14.0628ms
+2025-05-03 15:51:48.421 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/code_animate.css - - - 404 - - 5.8190ms
+2025-05-03 15:51:48.424 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/bootsnav.css - -
+2025-05-03 15:51:48.427 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/bootsnav.css - - - 404 - - 2.8538ms
+2025-05-03 15:51:48.448 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/owl.carousel.min.css - -
+2025-05-03 15:51:48.452 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/owl.carousel.min.css - - - 404 - - 3.1824ms
+2025-05-03 15:51:48.474 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/nice-select.css - -
+2025-05-03 15:51:48.476 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/nice-select.css - - - 404 - - 1.6558ms
+2025-05-03 15:51:48.508 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/css/baguetteBox.min.css - -
+2025-05-03 15:51:48.512 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/css/baguetteBox.min.css - - - 404 - - 4.0502ms
+2025-05-03 15:51:48.556 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:51:48.674 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 117.1157ms
+2025-05-03 15:51:48.823 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14
+2025-05-03 15:51:48.824 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:51:48.870 +05:30 [INF] Route matched with {action = "GetScrollContent", controller = "Product", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetScrollContent(Int32, Int32) on controller GroceryWebApp.Controllers.Products.ProductController (GroceryWebApp).
+2025-05-03 15:51:48.902 +05:30 [INF] Start processing HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/1/10
+2025-05-03 15:51:48.903 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:51:48.903 +05:30 [INF] Sending request to "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:51:48.903 +05:30 [INF] Sending HTTP request GET https://localhost:44371/Api/Products/GetScrollContent/1/10
+2025-05-03 15:51:49.070 +05:30 [INF] Received HTTP response headers after 167.2133ms - 200
+2025-05-03 15:51:49.071 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:51:49.071 +05:30 [INF] Received a success response from "https://localhost:44371/Api/Products/GetScrollContent/1/10"
+2025-05-03 15:51:49.071 +05:30 [INF] End processing HTTP request after 168.4759ms - 200
+2025-05-03 15:51:49.079 +05:30 [INF] Products Pulled
+2025-05-03 15:51:49.087 +05:30 [INF] Executing PartialViewResult, running view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml.
+2025-05-03 15:51:49.231 +05:30 [INF] Executed PartialViewResult - view ~/Pages/Products/UI/Partial/_ScrollForMorePartial.cshtml executed in 144.7378ms.
+2025-05-03 15:51:49.231 +05:30 [INF] Executed action GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp) in 360.2785ms
+2025-05-03 15:51:49.232 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Products.ProductController.GetScrollContent (GroceryWebApp)'
+2025-05-03 15:51:49.233 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44381/Product/GetScrollContent application/x-www-form-urlencoded;+charset=UTF-8 14 - 200 - text/html;+charset=utf-8 409.5007ms
+2025-05-03 15:52:47.622 +05:30 [INF] Request starting HTTP/2 POST https://localhost:44381/BasketItem/CreateBasket application/x-www-form-urlencoded;+charset=UTF-8 18
+2025-05-03 15:52:47.626 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Basket.BasketItemController.CreateBasket (GroceryWebApp)'
+2025-05-03 15:52:47.629 +05:30 [INF] Route matched with {action = "CreateBasket", controller = "BasketItem", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateBasket(System.String) on controller GroceryWebApp.Controllers.Basket.BasketItemController (GroceryWebApp).
+2025-05-03 15:52:47.718 +05:30 [INF] Start processing HTTP request POST https://localhost:44398/Api/Basket
+2025-05-03 15:52:47.719 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket"
+2025-05-03 15:52:47.719 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket"
+2025-05-03 15:52:47.719 +05:30 [INF] Sending HTTP request POST https://localhost:44398/Api/Basket
+2025-05-03 15:52:54.302 +05:30 [INF] Received HTTP response headers after 6583.1376ms - 200
+2025-05-03 15:52:54.303 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket"
+2025-05-03 15:52:54.303 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket"
+2025-05-03 15:52:54.303 +05:30 [INF] End processing HTTP request after 6584.5407ms - 200
+2025-05-03 15:52:54.313 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2025-05-03 15:52:54.326 +05:30 [INF] Executed action GroceryWebApp.Controllers.Basket.BasketItemController.CreateBasket (GroceryWebApp) in 6696.2961ms
+2025-05-03 15:52:54.327 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Basket.BasketItemController.CreateBasket (GroceryWebApp)'
+2025-05-03 15:52:54.328 +05:30 [INF] Request finished HTTP/2 POST https://localhost:44381/BasketItem/CreateBasket application/x-www-form-urlencoded;+charset=UTF-8 18 - 200 - application/json;+charset=utf-8 6705.8874ms
+2025-05-03 15:52:56.094 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Basket/UI/Cart - -
+2025-05-03 15:52:56.196 +05:30 [INF] Executing endpoint '/Basket/UI/Cart'
+2025-05-03 15:52:56.895 +05:30 [INF] Route matched with {page = "/Basket/UI/Cart", action = "", controller = ""}. Executing page /Basket/UI/Cart
+2025-05-03 15:52:57.324 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:53:10.097 +05:30 [INF] Start processing HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:53:10.097 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:53:10.097 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:53:10.097 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:53:15.992 +05:30 [INF] Received HTTP response headers after 5894.6709ms - 200
+2025-05-03 15:53:15.994 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:53:15.994 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:53:15.995 +05:30 [INF] End processing HTTP request after 5897.9781ms - 200
+2025-05-03 15:53:16.015 +05:30 [INF] Start processing HTTP request GET https://localhost:44303/Api/Unit/GetUnitDetail/1
+2025-05-03 15:53:16.015 +05:30 [INF] Sending request to "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:53:16.015 +05:30 [INF] Sending request to "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:53:16.015 +05:30 [INF] Sending HTTP request GET https://localhost:44303/Api/Unit/GetUnitDetail/1
+2025-05-03 15:53:18.825 +05:30 [INF] Received HTTP response headers after 2810.0187ms - 200
+2025-05-03 15:53:18.826 +05:30 [INF] Received a success response from "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:53:18.826 +05:30 [INF] Received a success response from "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:53:18.826 +05:30 [INF] End processing HTTP request after 2811.474ms - 200
+2025-05-03 15:53:18.832 +05:30 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:53:18.988 +05:30 [INF] Executed page /Basket/UI/Cart in 22093.0635ms
+2025-05-03 15:53:18.989 +05:30 [INF] Executed endpoint '/Basket/UI/Cart'
+2025-05-03 15:53:19.174 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Basket/UI/Cart - - - 200 - text/html;+charset=utf-8 23079.3445ms
+2025-05-03 15:53:19.354 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:53:19.460 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:53:19.628 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 274.3393ms
+2025-05-03 15:53:19.840 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 379.6326ms
+2025-05-03 15:53:38.046 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Basket/UI/CheckOut?userid=0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6 - -
+2025-05-03 15:53:38.120 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-03 15:53:38.130 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-03 15:53:38.135 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Basket/UI/CheckOut?userid=0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6 - - - 302 - - 87.7183ms
+2025-05-03 15:53:38.153 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Login/UI/Login - -
+2025-05-03 15:53:38.180 +05:30 [INF] Executing endpoint '/Login/UI/Login'
+2025-05-03 15:53:38.187 +05:30 [INF] Route matched with {page = "/Login/UI/Login", action = "", controller = ""}. Executing page /Login/UI/Login
+2025-05-03 15:53:38.188 +05:30 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-03 15:53:38.188 +05:30 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:53:38.215 +05:30 [INF] Executed page /Login/UI/Login in 28.0051ms
+2025-05-03 15:53:38.215 +05:30 [INF] Executed endpoint '/Login/UI/Login'
+2025-05-03 15:53:38.216 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Login/UI/Login - - - 200 - text/html;+charset=utf-8 63.1190ms
+2025-05-03 15:53:38.271 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:53:38.272 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:53:38.281 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 8.9159ms
+2025-05-03 15:53:38.337 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.4228ms
+2025-05-03 15:53:41.983 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Login/UI/Register - -
+2025-05-03 15:53:42.005 +05:30 [INF] Executing endpoint '/Login/UI/Register'
+2025-05-03 15:53:42.013 +05:30 [INF] Route matched with {page = "/Login/UI/Register", action = "", controller = ""}. Executing page /Login/UI/Register
+2025-05-03 15:53:42.013 +05:30 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-03 15:53:42.015 +05:30 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:53:42.076 +05:30 [INF] Executed page /Login/UI/Register in 62.8511ms
+2025-05-03 15:53:42.076 +05:30 [INF] Executed endpoint '/Login/UI/Register'
+2025-05-03 15:53:42.077 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Login/UI/Register - - - 200 - text/html;+charset=utf-8 93.6371ms
+2025-05-03 15:53:42.140 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:53:42.140 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:53:42.200 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 59.8599ms
+2025-05-03 15:53:42.226 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 86.7708ms
+2025-05-03 15:53:47.066 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Login/UI/Login - -
+2025-05-03 15:53:47.086 +05:30 [INF] Executing endpoint '/Login/UI/Login'
+2025-05-03 15:53:47.086 +05:30 [INF] Route matched with {page = "/Login/UI/Login", action = "", controller = ""}. Executing page /Login/UI/Login
+2025-05-03 15:53:47.086 +05:30 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-03 15:53:47.086 +05:30 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:53:47.092 +05:30 [INF] Executed page /Login/UI/Login in 5.9675ms
+2025-05-03 15:53:47.092 +05:30 [INF] Executed endpoint '/Login/UI/Login'
+2025-05-03 15:53:47.093 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Login/UI/Login - - - 200 - text/html;+charset=utf-8 26.6494ms
+2025-05-03 15:53:47.160 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:53:47.164 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:53:47.179 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 14.3200ms
+2025-05-03 15:53:47.208 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 47.7315ms
+2025-05-03 15:53:55.435 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/UserLogin/VerifyUser?mobile=9945056380 application/json;+charset=utf-8 -
+2025-05-03 15:53:55.439 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Login.UserLoginController.VerifyUser (GroceryWebApp)'
+2025-05-03 15:53:55.447 +05:30 [INF] Route matched with {action = "VerifyUser", controller = "UserLogin", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyUser(System.String) on controller GroceryWebApp.Controllers.Login.UserLoginController (GroceryWebApp).
+2025-05-03 15:53:55.460 +05:30 [INF] Start processing HTTP request GET https://localhost:44320/Api/Login/GetUser/9945056380
+2025-05-03 15:53:55.460 +05:30 [INF] Sending request to "https://localhost:44320/Api/Login/GetUser/9945056380"
+2025-05-03 15:53:55.461 +05:30 [INF] Sending request to "https://localhost:44320/Api/Login/GetUser/9945056380"
+2025-05-03 15:53:55.461 +05:30 [INF] Sending HTTP request GET https://localhost:44320/Api/Login/GetUser/9945056380
+2025-05-03 15:53:56.092 +05:30 [INF] Received HTTP response headers after 631.5389ms - 200
+2025-05-03 15:53:56.093 +05:30 [INF] Received a success response from "https://localhost:44320/Api/Login/GetUser/9945056380"
+2025-05-03 15:53:56.093 +05:30 [INF] Received a success response from "https://localhost:44320/Api/Login/GetUser/9945056380"
+2025-05-03 15:53:56.093 +05:30 [INF] End processing HTTP request after 632.8368ms - 200
+2025-05-03 15:53:57.545 +05:30 [INF] Executed action GroceryWebApp.Controllers.Login.UserLoginController.VerifyUser (GroceryWebApp) in 2097.9295ms
+2025-05-03 15:53:57.546 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Login.UserLoginController.VerifyUser (GroceryWebApp)'
+2025-05-03 15:53:57.551 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Twilio.Exceptions.ApiException: Authenticate
+   at External.Authentication.Twilio.AuthMessageSender.GetSMSCodeAsync(String mobile) in D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\SMS.Authentication\Twilio\MessageServices.cs:line 62
+   at GroceryWebApp.Controllers.Login.UserLoginController.VerifyUser(String mobile) in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Controllers\Login\UserLoginController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-05-03 15:53:57.617 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/UserLogin/VerifyUser?mobile=9945056380 application/json;+charset=utf-8 - - 500 - text/plain 2181.2996ms
+2025-05-03 15:54:00.793 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/UserLogin/VerifyUser?mobile=9945056380 application/json;+charset=utf-8 -
+2025-05-03 15:54:00.800 +05:30 [INF] Executing endpoint 'GroceryWebApp.Controllers.Login.UserLoginController.VerifyUser (GroceryWebApp)'
+2025-05-03 15:54:00.801 +05:30 [INF] Route matched with {action = "VerifyUser", controller = "UserLogin", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyUser(System.String) on controller GroceryWebApp.Controllers.Login.UserLoginController (GroceryWebApp).
+2025-05-03 15:54:00.802 +05:30 [INF] Start processing HTTP request GET https://localhost:44320/Api/Login/GetUser/9945056380
+2025-05-03 15:54:00.803 +05:30 [INF] Sending request to "https://localhost:44320/Api/Login/GetUser/9945056380"
+2025-05-03 15:54:00.804 +05:30 [INF] Sending request to "https://localhost:44320/Api/Login/GetUser/9945056380"
+2025-05-03 15:54:00.805 +05:30 [INF] Sending HTTP request GET https://localhost:44320/Api/Login/GetUser/9945056380
+2025-05-03 15:54:00.853 +05:30 [INF] Received HTTP response headers after 48.6217ms - 200
+2025-05-03 15:54:00.854 +05:30 [INF] Received a success response from "https://localhost:44320/Api/Login/GetUser/9945056380"
+2025-05-03 15:54:00.854 +05:30 [INF] Received a success response from "https://localhost:44320/Api/Login/GetUser/9945056380"
+2025-05-03 15:54:00.854 +05:30 [INF] End processing HTTP request after 52.1323ms - 200
+2025-05-03 15:54:01.727 +05:30 [INF] Executed action GroceryWebApp.Controllers.Login.UserLoginController.VerifyUser (GroceryWebApp) in 926.0778ms
+2025-05-03 15:54:01.728 +05:30 [INF] Executed endpoint 'GroceryWebApp.Controllers.Login.UserLoginController.VerifyUser (GroceryWebApp)'
+2025-05-03 15:54:01.729 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Twilio.Exceptions.ApiException: Authenticate
+   at External.Authentication.Twilio.AuthMessageSender.GetSMSCodeAsync(String mobile) in D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\SMS.Authentication\Twilio\MessageServices.cs:line 62
+   at GroceryWebApp.Controllers.Login.UserLoginController.VerifyUser(String mobile) in D:\ProjectCore\GroceryWebApp\src\WebApp\GroceryWebApp\Controllers\Login\UserLoginController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-05-03 15:54:01.734 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/UserLogin/VerifyUser?mobile=9945056380 application/json;+charset=utf-8 - - 500 - text/plain 941.2870ms
+2025-05-03 15:54:04.868 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/Basket/UI/Cart - -
+2025-05-03 15:54:04.884 +05:30 [INF] Executing endpoint '/Basket/UI/Cart'
+2025-05-03 15:54:04.884 +05:30 [INF] Route matched with {page = "/Basket/UI/Cart", action = "", controller = ""}. Executing page /Basket/UI/Cart
+2025-05-03 15:54:04.887 +05:30 [INF] Executing handler method GroceryWebApp.Pages.Basket.UI.CartModel.OnGetAsync - ModelState is "Valid"
+2025-05-03 15:54:04.887 +05:30 [INF] Start processing HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:54:04.887 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:54:04.888 +05:30 [INF] Sending request to "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:54:04.888 +05:30 [INF] Sending HTTP request GET https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6
+2025-05-03 15:54:05.136 +05:30 [INF] Received HTTP response headers after 247.5515ms - 200
+2025-05-03 15:54:05.136 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:54:05.136 +05:30 [INF] Received a success response from "https://localhost:44398/Api/Basket/0b9951f0-3d79-42b8-bf0f-d5df7e7e06a6"
+2025-05-03 15:54:05.136 +05:30 [INF] End processing HTTP request after 249.2853ms - 200
+2025-05-03 15:54:05.141 +05:30 [INF] Start processing HTTP request GET https://localhost:44303/Api/Unit/GetUnitDetail/1
+2025-05-03 15:54:05.141 +05:30 [INF] Sending request to "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:54:05.141 +05:30 [INF] Sending request to "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:54:05.141 +05:30 [INF] Sending HTTP request GET https://localhost:44303/Api/Unit/GetUnitDetail/1
+2025-05-03 15:54:05.195 +05:30 [INF] Received HTTP response headers after 53.9043ms - 200
+2025-05-03 15:54:05.196 +05:30 [INF] Received a success response from "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:54:05.196 +05:30 [INF] Received a success response from "https://localhost:44303/Api/Unit/GetUnitDetail/1"
+2025-05-03 15:54:05.196 +05:30 [INF] End processing HTTP request after 54.8163ms - 200
+2025-05-03 15:54:05.197 +05:30 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-03 15:54:05.200 +05:30 [INF] Executed page /Basket/UI/Cart in 316.2924ms
+2025-05-03 15:54:05.200 +05:30 [INF] Executed endpoint '/Basket/UI/Cart'
+2025-05-03 15:54:05.201 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/Basket/UI/Cart - - - 200 - text/html;+charset=utf-8 333.0372ms
+2025-05-03 15:54:05.334 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - -
+2025-05-03 15:54:05.351 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44381/_vs/browserLink - -
+2025-05-03 15:54:05.363 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 29.7297ms
+2025-05-03 15:54:05.406 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44381/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.5621ms

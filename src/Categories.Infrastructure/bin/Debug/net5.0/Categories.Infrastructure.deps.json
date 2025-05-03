@@ -1269,12 +1269,18 @@
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0"
         },
         "runtime": {
-          "Categories.Application.dll": {}
+          "Categories.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Categories.Domain/1.0.0": {
         "runtime": {
-          "Categories.Domain.dll": {}
+          "Categories.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

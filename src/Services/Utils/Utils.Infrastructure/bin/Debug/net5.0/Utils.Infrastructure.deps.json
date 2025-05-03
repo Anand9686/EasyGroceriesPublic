@@ -1268,12 +1268,18 @@
           "Utils.Domain": "1.0.0"
         },
         "runtime": {
-          "Utils.Application.dll": {}
+          "Utils.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Utils.Domain/1.0.0": {
         "runtime": {
-          "Utils.Domain.dll": {}
+          "Utils.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

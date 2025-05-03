@@ -150,7 +150,10 @@
       },
       "Categories.Domain/1.0.0": {
         "runtime": {
-          "Categories.Domain.dll": {}
+          "Categories.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

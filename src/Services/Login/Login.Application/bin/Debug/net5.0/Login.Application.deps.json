@@ -149,7 +149,10 @@
       },
       "Login.Domain/1.0.0": {
         "runtime": {
-          "Login.Domain.dll": {}
+          "Login.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -2314,7 +2314,10 @@
           "Serilog.Sinks.MySQL": "4.6.0"
         },
         "runtime": {
-          "Common.Logging.dll": {}
+          "Common.Logging.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "Common.Logging.dll": {}
@@ -2326,7 +2329,10 @@
           "Twilio": "6.2.4"
         },
         "runtime": {
-          "External.Authentication.dll": {}
+          "External.Authentication.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "External.Authentication.dll": {}

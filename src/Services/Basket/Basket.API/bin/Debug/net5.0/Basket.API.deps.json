@@ -1737,7 +1737,10 @@
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0"
         },
         "runtime": {
-          "Basket.Application.dll": {}
+          "Basket.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "Basket.Application.dll": {}
@@ -1745,7 +1748,10 @@
       },
       "Basket.Domain/1.0.0": {
         "runtime": {
-          "Basket.Domain.dll": {}
+          "Basket.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "Basket.Domain.dll": {}
@@ -1757,7 +1763,10 @@
           "MySql.Data.EntityFrameworkCore": "8.0.22"
         },
         "runtime": {
-          "Basket.Infrastructure.dll": {}
+          "Basket.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "Basket.Infrastructure.dll": {}

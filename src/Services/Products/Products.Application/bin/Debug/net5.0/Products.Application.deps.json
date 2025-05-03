@@ -149,7 +149,10 @@
       },
       "Products.Domain/1.0.0": {
         "runtime": {
-          "Products.Domain.dll": {}
+          "Products.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

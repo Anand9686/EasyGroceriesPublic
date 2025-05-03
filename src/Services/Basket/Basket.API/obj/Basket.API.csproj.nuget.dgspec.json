@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\Basket.API.csproj": {}
+    "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\Basket.API.csproj": {}
   },
   "projects": {
-    "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\Basket.API.csproj": {
+    "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\Basket.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\Basket.API.csproj",
+        "projectUniqueName": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\Basket.API.csproj",
         "projectName": "Basket.API",
-        "projectPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\Basket.API.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\obj\\",
+        "projectPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\Basket.API.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,17 +26,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj": {
-                "projectPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj"
+              "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj": {
+                "projectPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj"
               },
-              "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj": {
-                "projectPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj"
+              "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj": {
+                "projectPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj"
               }
             }
           }
@@ -44,6 +46,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -73,7 +80,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -85,24 +93,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj": {
+    "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj",
+        "projectUniqueName": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj",
         "projectName": "Basket.Application",
-        "projectPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\obj\\",
+        "projectPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -110,14 +119,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj": {
-                "projectPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj"
+              "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj": {
+                "projectPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj"
               }
             }
           }
@@ -126,6 +136,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -159,7 +174,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -168,24 +184,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj": {
+    "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj",
+        "projectUniqueName": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj",
         "projectName": "Basket.Domain",
-        "projectPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\obj\\",
+        "projectPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\Basket.Domain.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -193,6 +210,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -205,6 +223,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -216,33 +239,49 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj": {
+    "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
+        "projectUniqueName": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
         "projectName": "Basket.Infrastructure",
-        "projectPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\obj\\",
+        "projectPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\Basket.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -250,14 +289,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj": {
-                "projectPath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj"
+              "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj": {
+                "projectPath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Basket\\Basket.Application\\Basket.Application.csproj"
               }
             }
           }
@@ -266,6 +306,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -283,7 +328,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -292,7 +338,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -22,3 +22,15 @@ E:\ProjectsP\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\Ve
 E:\ProjectsP\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\refint\Vendor.Domain.dll
 E:\ProjectsP\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\Vendor.Domain.pdb
 E:\ProjectsP\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\ref\Vendor.Domain.dll
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\bin\Debug\net5.0\Vendor.Domain.deps.json
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\bin\Debug\net5.0\Vendor.Domain.dll
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\bin\Debug\net5.0\Vendor.Domain.pdb
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\Vendor.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\Vendor.Domain.AssemblyInfoInputs.cache
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\Vendor.Domain.AssemblyInfo.cs
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\Vendor.Domain.csproj.CoreCompileInputs.cache
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\Vendor.Domain.sourcelink.json
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\Vendor.Domain.dll
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\refint\Vendor.Domain.dll
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\Vendor.Domain.pdb
+D:\ProjectCore\GroceryWebApp\src\Services\Vendor\Vendor.Domain\obj\Debug\net5.0\ref\Vendor.Domain.dll

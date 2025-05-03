@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "73NTyL9gcEWYt2Z+gAMrOUdM8sFKJRtDSPRmONTvMoHhg9TghGNyy0nDgM7cFMkGT7rBrnpVXKDRYpfAL/NK2w==",
+  "dgSpecHash": "tGDmCbsDT38=",
   "success": true,
-  "projectFilePath": "E:\\ProjectsP\\GroceryWebApp\\src\\Services\\Categories\\Categories.Domain\\Categories.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\ProjectCore\\GroceryWebApp\\src\\Services\\Categories\\Categories.Domain\\Categories.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

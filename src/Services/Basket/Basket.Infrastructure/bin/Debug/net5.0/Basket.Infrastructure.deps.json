@@ -1268,12 +1268,18 @@
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0"
         },
         "runtime": {
-          "Basket.Application.dll": {}
+          "Basket.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Basket.Domain/1.0.0": {
         "runtime": {
-          "Basket.Domain.dll": {}
+          "Basket.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -149,7 +149,10 @@
       },
       "Basket.Domain/1.0.0": {
         "runtime": {
-          "Basket.Domain.dll": {}
+          "Basket.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

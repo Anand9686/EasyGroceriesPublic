@@ -1268,12 +1268,18 @@
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0"
         },
         "runtime": {
-          "Login.Application.dll": {}
+          "Login.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Login.Domain/1.0.0": {
         "runtime": {
-          "Login.Domain.dll": {}
+          "Login.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

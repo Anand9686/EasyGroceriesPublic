@@ -1637,7 +1637,10 @@
           "Vendor.Domain": "1.0.0"
         },
         "runtime": {
-          "Vendor.Application.dll": {}
+          "Vendor.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "Vendor.Application.dll": {}
@@ -1645,7 +1648,10 @@
       },
       "Vendor.Domain/1.0.0": {
         "runtime": {
-          "Vendor.Domain.dll": {}
+          "Vendor.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "Vendor.Domain.dll": {}
@@ -1657,7 +1663,10 @@
           "Vendor.Application": "1.0.0"
         },
         "runtime": {
-          "Vendor.Infrastructure.dll": {}
+          "Vendor.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "Vendor.Infrastructure.dll": {}

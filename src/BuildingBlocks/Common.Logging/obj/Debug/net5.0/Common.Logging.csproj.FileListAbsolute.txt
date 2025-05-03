@@ -34,3 +34,16 @@ E:\ProjectsP\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Co
 E:\ProjectsP\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\refint\Common.Logging.dll
 E:\ProjectsP\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Common.Logging.pdb
 E:\ProjectsP\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\ref\Common.Logging.dll
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\bin\Debug\net5.0\Common.Logging.deps.json
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\bin\Debug\net5.0\Common.Logging.dll
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\bin\Debug\net5.0\Common.Logging.pdb
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Common.Logging.csproj.AssemblyReference.cache
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Common.Logging.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Common.Logging.AssemblyInfoInputs.cache
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Common.Logging.AssemblyInfo.cs
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Common.Logging.csproj.CoreCompileInputs.cache
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Common.Logging.sourcelink.json
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Common.Logging.dll
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\refint\Common.Logging.dll
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\Common.Logging.pdb
+D:\ProjectCore\GroceryWebApp\src\BuildingBlocks\Common.Logging\obj\Debug\net5.0\ref\Common.Logging.dll

@@ -311,7 +311,7 @@ CREATE TABLE `productdetail` (
 
 LOCK TABLES `productdetail` WRITE;
 /*!40000 ALTER TABLE `productdetail` DISABLE KEYS */;
-INSERT INTO `productdetail` VALUES (40,1,1,1,2,4,'PVC001','PVN-1',25,20,20,20,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Test','1 KG'),
+INSERT INTO `productdetail` VALUES (40,1,1,1,2,4,'PVC001','PVN-1',25,20,20,20,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Test','1 KG',NULL),
 (41,1,1,1,1,1,'PVC0002','PVN-2',25,25,19,19,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Test','1 KG',NULL),
 (42,1,1,1,1,2,'PVC001','PVN-1',200,22,20,10,0,NOW(),NOW(),NOW(),'test.jpg',1,'self',NOW(),'self',NOW(),'Basamti Rice - 5KG','5KG',NULL),
 (43,1,1,1,1,1,'PVC001','PVN-1',50,45,25,24,0,'2190-07-02 14:31:00',NOW(),'2189-07-02 14:31:00','test.jpg',1,'self',NOW(),'self',NOW(),'Basamti Rice - 1KG','1 KG',NULL),

@@ -578,7 +578,8 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'9483941729-1','Suresh',NOW(),'vendor@gmail.com','self',NOW(),NULL,NULL,1),(2,'9483941729-2','user1',NOW(),'','self',NOW(),NULL,NULL,1),(6,'9483941729','User1',NOW(),'test@te.com','self',NOW(),NULL,NULL,1);
+INSERT INTO `user` VALUES (1,'9945056380-1','Suresh',NOW(),'anand.surpur@gmail.com','self',NOW(),NULL,NULL,1),
+(2,'9945056380-2','user1',NOW(),'','self',NOW(),NULL,NULL,1),(6,'9945056380','User1',NOW(),'anand.surpur@gmail.com','self',NOW(),NULL,NULL,1);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -670,7 +671,7 @@ CREATE TABLE `vendor` (
 
 LOCK TABLES `vendor` WRITE;
 /*!40000 ALTER TABLE `vendor` DISABLE KEYS */;
-INSERT INTO `vendor` VALUES (1,'Vendor 1','Vendor -BasavanaGudi','vendor@gmail.com','+919988776654',1,'self',NOW(),NULL,NULL),(2,'anand','blr,blr,blr','anand.surpur@gmail.com','+919988776652',1,'self',NOW(),NULL,NULL),(3,'Vendor - 3','Vendor Address','anand.surpur@gmail.com','+919988776655',1,'self',NOW(),NULL,NULL),(4,'Vendor -4','Vendor Address','anand.surpur@gmail.com','+919988776655',1,'self',NOW(),NULL,NULL),(5,'Vendor - 6','Vendor Address - 6','anand.surpur@gmail.com','9988776655',1,'self',NOW(),NULL,NULL);
+INSERT INTO `vendor` VALUES (1,'Vendor 1','Vendor -BasavanaGudi','vendor@gmail.com','+919945056380',1,'self',NOW(),NULL,NULL),(2,'anand','blr,blr,blr','anand.surpur@gmail.com','+919945056380',1,'self',NOW(),NULL,NULL),(3,'Vendor - 3','Vendor Address','anand.surpur@gmail.com','+919945056380',1,'self',NOW(),NULL,NULL),(4,'Vendor -4','Vendor Address','anand.surpur@gmail.com','+919945056380',1,'self',NOW(),NULL,NULL),(5,'Vendor - 6','Vendor Address - 6','anand.surpur@gmail.com','+919945056380',1,'self',NOW(),NULL,NULL);
 /*!40000 ALTER TABLE `vendor` ENABLE KEYS */;
 UNLOCK TABLES;
 
